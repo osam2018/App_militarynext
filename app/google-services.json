@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "688370641458",
+    "firebase_url": "https://militarynext-ca2dc.firebaseio.com",
+    "project_id": "militarynext-ca2dc",
+    "storage_bucket": "militarynext-ca2dc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688370641458:android:e2792dd8ec0b0dc9",
+        "android_client_info": {
+          "package_name": "com.example.user.mil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "688370641458-0t1fm75991ucilq32sejqqqeh2ai55fc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZlzhS9vpFcKxvs7hr7o19xHzI1B-x8mY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
