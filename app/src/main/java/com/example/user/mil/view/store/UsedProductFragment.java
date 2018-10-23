@@ -1,16 +1,22 @@
 package com.example.user.mil.view.store;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.user.mil.R;
 import com.example.user.mil.model.UsedProduct;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,36 +31,38 @@ public class UsedProductFragment extends Fragment {
     @BindView(R.id.used_product_recycler)
     RecyclerView usedProductRecycler;
 
-    private RecyclerView.Adapter usedProductAdapter;
+    private UsedProductRecyclerViewAdapter usedProductAdapter;
     private RecyclerView.LayoutManager usedProductLayoutManager;
-    private List<UsedProduct> usedProducts = new ArrayList<>();
+    private ArrayList<UsedProduct> usedProducts = new ArrayList<>();
 
     public void initRecyclerView() {
 
-        ArrayList arrayList = new ArrayList();
+        usedProductAdapter = new UsedProductRecyclerViewAdapter(getContext(), usedProducts);
+        usedProductRecycler.setAdapter(usedProductAdapter);
 
-        UsedProductRecyclerViewAdapter adapter = new UsedProductRecyclerViewAdapter(getContext(), arrayList);
-        usedProductRecycler.setAdapter(adapter);
+        usedProductLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
+        usedProductRecycler.setLayoutManager(usedProductLayoutManager);
 
-        GridLayoutManager manager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
-        usedProductRecycler.setLayoutManager(manager);
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference mDatabase = firebaseDatabase.getReference();
 
-        FirebaseDatabase firebaseDatabase =
+        mDatabase.child("store").child("used").child("items").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                UsedProduct usedProduct = dataSnapshot.getValue(UsedProduct.class);
+                usedProducts.add(usedProduct);
+                usedProductAdapter.notifyDataSetChanged();
+                Log.d("으악","이이");
+            }
 
-//        usedProductLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
-//        usedProductAdapter = new LinearLayoutManager(usedProducts);
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
-//        usedProductRecycler.setAdapter(usedProductAdapter);
-//        usedProductRecycler.setLayoutManager(usedProductLayoutManager);
+            }
+        });
+
     }
 
-    private void getUsedProducts() {
-
-    }
-
-    public void loadUsedProductItems() {
-
-    }
 
     public UsedProductFragment() {
         // Required empty public constructor

@@ -3,24 +3,16 @@ package com.example.user.mil.model;
 public class User {
 
     private String milNumber;
-    private String included;
+    private String password;
     private String name;
     private String grade;
-    private String phoneNumber;
-    private String photoUrl;
     private String troopName;
 
-    public User() {
-
-    }
-
-    public User(String milNumber, String included, String name, String grade, String phoneNumber, String photoUrl, String troopName) {
+    public User(String milNumber, String password, String name, String grade, String troopName) {
         this.milNumber = milNumber;
-        this.included = included;
+        this.password = password;
         this.name = name;
         this.grade = grade;
-        this.phoneNumber = phoneNumber;
-        this.photoUrl = photoUrl;
         this.troopName = troopName;
     }
 
@@ -30,14 +22,6 @@ public class User {
 
     public void setMilNumber(String milNumber) {
         this.milNumber = milNumber;
-    }
-
-    public String getIncluded() {
-        return included;
-    }
-
-    public void setIncluded(String included) {
-        this.included = included;
     }
 
     public String getName() {
@@ -56,27 +40,19 @@ public class User {
         this.grade = grade;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getPhotoUrl() {
-        return photoUrl;
-    }
-
-    public void setPhotoUrl(String photoUrl) {
-        this.photoUrl = photoUrl;
-    }
-
     public String getTroopName() {
         return troopName;
     }
 
     public void setTroopName(String troopName) {
         this.troopName = troopName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

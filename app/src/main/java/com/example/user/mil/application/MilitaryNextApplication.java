@@ -5,7 +5,7 @@ import android.app.Application;
 import com.example.user.mil.model.User;
 
 public class MilitaryNextApplication extends Application {
-    private static User currentUser = new User();
+    private static User currentUser = new User(milNumber, name, grade, troopName);
 
     @Override
     public void onCreate() {
