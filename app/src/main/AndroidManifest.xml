@@ -21,21 +21,24 @@
         <activity android:name=".view.auth.SignupActivity" />
         <activity android:name=".view.todo.TodoActivity" />
         <activity android:name=".view.troop.TroopActivity" />
-        <activity android:name=".view.community.CommunityActivity"></activity>
+        <activity android:name=".view.community.CommunityActivity" />
 
-        <!--<service-->
-            <!--android:name=".fcm.MyFirebaseMessagingService">-->
-            <!--<intent-filter>-->
-                <!--<action android:name="com.google.firebase.MESSAGING_EVENT"/>-->
-            <!--</intent-filter>-->
-        <!--</service>-->
+        <!-- <service -->
+        <!-- android:name=".fcm.MyFirebaseMessagingService"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.MESSAGING_EVENT"/> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
 
-        <!--<service-->
-            <!--android:name=".fcm.MyFirebaseInstanceIDService">-->
-            <!--<intent-filter>-->
-                <!--<action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>-->
-            <!--</intent-filter>-->
-        <!--</service>-->
+
+        <!-- <service -->
+        <!-- android:name=".fcm.MyFirebaseInstanceIDService"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <activity android:name=".MenuSelectActivity" />
+        <activity android:name=".view.store.DeleteProductActivity"></activity>
     </application>
 
 </manifest>
