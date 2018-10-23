@@ -30,7 +30,7 @@
         android:id="@+id/signupIdTextView"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:hint="이메일 주소를 입력해주세요"
+        android:hint="군번을 입력해주세요"
         app:layout_constraintTop_toBottomOf="@+id/signupTitleView"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -40,20 +40,8 @@
         android:layout_marginTop="30dp"
         android:layout_marginStart="14dp"
         android:layout_marginEnd="14dp"
-
         android:paddingLeft="18dp" />
 
-    <ImageButton
-        android:id="@+id/signupCheckIdButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintRight_toRightOf="@+id/signupIdTextView"
-        app:layout_constraintTop_toTopOf="@+id/signupIdTextView"
-        app:layout_constraintBottom_toBottomOf="@+id/signupIdTextView"
-        android:background="@null"
-
-        android:layout_marginEnd="14dp"
-        android:layout_marginRight="14dp" />
 
     <EditText
         android:id="@+id/signupPasswordTextView"
@@ -66,7 +54,7 @@
         android:textSize="10sp"
         android:textColor="#95989A"
         android:paddingStart="18dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:layout_marginStart="14dp"
         android:layout_marginEnd="14dp"
         android:inputType="textPassword"
@@ -83,20 +71,53 @@
         android:textSize="10sp"
         android:textColor="#95989A"
         android:paddingStart="18dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:layout_marginStart="14dp"
         android:layout_marginEnd="14dp"
         android:inputType="textPassword"
+        android:paddingLeft="18dp" />
+
+    <EditText
+        android:id="@+id/signupgradeTextView"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="계급을 입력해주세요"
+        app:layout_constraintTop_toBottomOf="@+id/signupPasswordRepeatTextView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="10sp"
+        android:textColor="#95989A"
+        android:paddingStart="18dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:paddingLeft="18dp" />
+
+    <EditText
+        android:id="@+id/signupTroopTextView"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="부대명을 입력해주세요"
+        app:layout_constraintTop_toBottomOf="@+id/signupgradeTextView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="10sp"
+        android:textColor="#95989A"
+        android:paddingStart="18dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
         android:paddingLeft="18dp" />
 
     <Button
         android:id="@+id/signupNextButton"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:text="다음"
+        android:text="완료"
         android:textColor="#ffffff"
+        android:background="@color/colorPrimary"
         android:textSize="13sp"
-        app:layout_constraintTop_toBottomOf="@+id/signupPasswordRepeatTextView"
+        app:layout_constraintTop_toBottomOf="@+id/signupTroopTextView"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="20dp"
