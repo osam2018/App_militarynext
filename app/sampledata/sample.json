@@ -1,0 +1,93 @@
+{
+  "user": {
+    "17-76087465":  {
+      "milNumber": "17-76087465",
+      "password": "test",
+      "grade": "일병",
+      "name": "조영제",
+      "troopN]ame": "4284부대"
+    },
+    "admin": {
+      "milNumber": "admin",
+      "password": "admin",
+      "grade": "병장",
+      "name": "관리자",
+      "troopName": "국방부"
+    }
+  },
+  "store": {
+    "common": {
+      "items": {
+        "dkdlgjqm": {
+          "id": "dkdlgjqm"
+          "name": "아이허브 단백질 보충제가 반값세일!",
+          "webLink": "",
+          "imageLink": "",
+          "price": 15000,
+          "brand": "아이허브",
+          "salePercent": 10
+        },
+        "dpavlTmflvmffpdldj": {
+          "id": "dpavlTmflvmffpdldj",
+          "name": "군전용 mp3 플레이어 특가판매!",
+          "webLink": "",
+          "imageLink": "",
+          "price": 18000,
+          "brand": "COWON",
+          "salePercent": 10
+        },
+        "tmakxmvhsxmrrk": {
+          "id": "tmakxmvhsxmrrk",
+          "name": "독서대 할인판매!",
+          "webLink": "",
+          "imageLink": "",
+          "price": 20000,
+          "brand": "coupang",
+          "salePercent": 10
+        }
+      }
+    },
+    "used": {
+      "items": {
+        "xhdlrcor": {
+          "id": "xhdlrcor",
+          "name": "토익책!",
+          "imageLink": "",
+          "description": "공부하기전에 목표점수가 달성되어 깨끗한 상태인 책을 바로 판매합니다.",
+          "seeCount": 4,
+          "likedCount": 7,
+          "milNumber": "17-76087465"
+        },
+        "xhdlrcor1": {
+          "id": "xhdlrcor1",
+          "name": "CD 플레이어, CD 3종",
+          "imageLink": "",
+          "description": "CD 플레이어, CD 3종입니다. 볼빨간사춘기, 레드벨벳, 트와이스 총 3종입니다.",
+          "seeCount": 6,
+          "likedCount": 7,
+          "milNumber": "17-76087465"
+        },
+        "xhdlrcor2": {
+          "id": "xhdlrcor2",
+          "name": "자격증책 5권!",
+          "imageLink": "",
+          "description": "공부하다가 그만둬서 책상태가 깨끗합니다. 다른분들은 이걸로 공부해서 포상휴가 타세요~",
+          "seeCount": 8,
+          "likedCount": 9,
+          "milNumber": "17-76087465"
+        },
+        "xhdlrcor3": {
+          "id": "xhdlrcor3",
+          "name": "코원 밀리터리",
+          "imageLink": "",
+          "description": "전역을 하게되어서 필요가 없을거같아 싸게 판매합니다.",
+          "seeCount": 10,
+          "likedCount": 11,
+          "milNumber": "17-76087465"
+        }
+      }
+    }
+
+
+  }
+}

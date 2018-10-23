@@ -2,36 +2,40 @@ package com.example.user.mil.model;
 
 public class UsedProduct {
 
-    private String tile;
-    private int price;
+    private String id;
+    private String name;
     private String imageLink;
+    private String description;
+    private int price;
     private int seeCount;
     private int likedCount;
-    private String userId;
+    private String milNumber;
 
-    public UsedProduct(String tile, int price, String imageLink, int seeCount, int likedCount, String userId, String userIncluded, String userName) {
-        this.tile = tile;
-        this.price = price;
+    public UsedProduct(String id, String name, String imageLink, String description, int price, int seeCount, int likedCount, String milNumber) {
+        this.id = id;
+        this.name = name;
         this.imageLink = imageLink;
+        this.description = description;
+        this.price = price;
         this.seeCount = seeCount;
         this.likedCount = likedCount;
-        this.userId = userId;
+        this.milNumber = milNumber;
+    }
+    
+    public String getId() {
+        return id;
     }
 
-    public String getTile() {
-        return tile;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public void setTile(String tile) {
-        this.tile = tile;
+    public String getName() {
+        return name;
     }
 
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getImageLink() {
@@ -40,6 +44,22 @@ public class UsedProduct {
 
     public void setImageLink(String imageLink) {
         this.imageLink = imageLink;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public int getSeeCount() {
@@ -58,12 +78,11 @@ public class UsedProduct {
         this.likedCount = likedCount;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getMilNumber() {
+        return milNumber;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setMilNumber(String milNumber) {
+        this.milNumber = milNumber;
     }
-
 }
