@@ -8,14 +8,20 @@ public class User {
     private String grade;
     private String phoneNumber;
     private String photoUrl;
+    private String troopName;
 
-    public User(String milNumber, String included, String name, String grade, String phoneNumber, String photoUrl) {
+    public User() {
+
+    }
+
+    public User(String milNumber, String included, String name, String grade, String phoneNumber, String photoUrl, String troopName) {
         this.milNumber = milNumber;
         this.included = included;
         this.name = name;
         this.grade = grade;
         this.phoneNumber = phoneNumber;
         this.photoUrl = photoUrl;
+        this.troopName = troopName;
     }
 
     public String getMilNumber() {
@@ -64,5 +70,13 @@ public class User {
 
     public void setPhotoUrl(String photoUrl) {
         this.photoUrl = photoUrl;
+    }
+
+    public String getTroopName() {
+        return troopName;
+    }
+
+    public void setTroopName(String troopName) {
+        this.troopName = troopName;
     }
 }

@@ -1,26 +1,30 @@
 package com.example.user.mil.view.store;
 
 
+import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import com.example.user.mil.R;
+import com.roughike.bottombar.BottomBar;
+import com.roughike.bottombar.OnMenuTabClickListener;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class StoreActivity extends AppCompatActivity {
 
     @BindView(R.id.store_fragment_container)
     FrameLayout fragmentFrameLayout;
 
-    @BindView(R.id.store_bottom_navigation)
-    BottomNavigationView bottomNavigationMenu;
+    private BottomBar bottomNavigationMenu;
 
 
     @Override
@@ -28,12 +32,18 @@ public class StoreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store);
 
-        bottomNavigationMenu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        ButterKnife.bind(this);
+
+        BottomBar bottomNavigationMenu = (BottomBar) findViewById(R.id.store_bottom_navigation);
+        Log.d("dddddd",String.valueOf(bottomNavigationMenu));
+
+        bottomNavigationMenu.setItems(R.menu.store_navigation_items);
+        bottomNavigationMenu.setOnMenuTabClickListener(new OnMenuTabClickListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+            public void onMenuTabSelected(@IdRes int menuItemId) {
                 Fragment selectedFragment = null;
 
-                switch (menuItem.getItemId())  {
+                switch (menuItemId)  {
                     case R.id.action_store_common:
                         selectedFragment = CommonStoreFragment.newInstance();
                         break;
@@ -50,7 +60,10 @@ public class StoreActivity extends AppCompatActivity {
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.store_fragment_container, selectedFragment);
                 transaction.commit();
-                return true;
+            }
+
+            @Override
+            public void onMenuTabReSelected(int menuItemId) {
 
             }
         });
@@ -59,12 +72,6 @@ public class StoreActivity extends AppCompatActivity {
         transaction.replace(R.id.store_fragment_container, CommonStoreFragment.newInstance());
         transaction.commit();
     }
-
-
-
-
-
-
 
 
 }
