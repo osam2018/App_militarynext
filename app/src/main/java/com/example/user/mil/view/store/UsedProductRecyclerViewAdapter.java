@@ -64,8 +64,8 @@ public class UsedProductRecyclerViewAdapter extends RecyclerView.Adapter<UsedPro
         public void setData(UsedProduct item) {
             this.item = item;
 
-            title.setText(item.getTile());
-            included.setText(item.getUserIncluded());
+            title.setText(item.getName());
+            included.setText("4284부대 일병 조영제");
             price.setText(String.valueOf(item.getPrice()));
             likedCount.setText(String.valueOf(item.getLikedCount()));
             seeCount.setText(String.valueOf(item.getSeeCount()));

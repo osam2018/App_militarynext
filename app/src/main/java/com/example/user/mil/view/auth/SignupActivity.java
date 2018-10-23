@@ -81,10 +81,11 @@ public class SignupActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                Toast.makeText(getApplicationContext(), "인터넷 연결을 확인해주세요",Toast.LENGTH_SHORT);
+                return ;
             }
         });
-\
+
         User newUser = new User(milNumber,passwoprd,name,grade,troop);
         databaseReference.child("user").child(milNumber).setValue(newUser);
         MilitaryNextApplication.setCurrentUser(newUser);

@@ -12,16 +12,10 @@ import android.view.ViewGroup;
 import com.example.user.mil.R;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link CommonStoreFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link CommonStoreFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class CommonStoreFragment extends Fragment {
 
     @BindView(R.id.custom_store_recycler)
@@ -50,7 +44,12 @@ public class CommonStoreFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_common_shop, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_common_shop, container, false);
+        ButterKnife.bind(this, view);
+
+        return view;
+
     }
 
 

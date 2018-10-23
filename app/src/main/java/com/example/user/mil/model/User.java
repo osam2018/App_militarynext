@@ -8,6 +8,10 @@ public class User {
     private String grade;
     private String troopName;
 
+    public User() {
+
+    }
+
     public User(String milNumber, String password, String name, String grade, String troopName) {
         this.milNumber = milNumber;
         this.password = password;
