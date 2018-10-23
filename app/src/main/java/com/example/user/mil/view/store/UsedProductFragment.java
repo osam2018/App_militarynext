@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import com.example.user.mil.R;
 import com.example.user.mil.model.UsedProduct;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,11 +32,6 @@ public class UsedProductFragment extends Fragment {
     public void initRecyclerView() {
 
         ArrayList arrayList = new ArrayList();
-        arrayList.add(new UsedProduct("제목임",15000,"운동기구","https://cdn-images-1.medium.com/max/800/1*M6HU7jlyQhmV8CjFcKdQhw.png",13,12,"zz","ss", "zz"));
-        arrayList.add(new UsedProduct("제목임",15000,"운동기구","https://cdn-images-1.medium.com/max/800/1*M6HU7jlyQhmV8CjFcKdQhw.png",13,12,"zz","ss", "zz"));
-        arrayList.add(new UsedProduct("제목임",15000,"운동기구","https://cdn-images-1.medium.com/max/800/1*M6HU7jlyQhmV8CjFcKdQhw.png",13,12,"zz","ss", "zz"));
-        arrayList.add(new UsedProduct("제목임",15000,"운동기구","https://cdn-images-1.medium.com/max/800/1*M6HU7jlyQhmV8CjFcKdQhw.png",13,12,"zz","ss", "zz"));
-        arrayList.add(new UsedProduct("제목임",15000,"운동기구","https://cdn-images-1.medium.com/max/800/1*M6HU7jlyQhmV8CjFcKdQhw.png",13,12,"zz","ss", "zz"));
 
         UsedProductRecyclerViewAdapter adapter = new UsedProductRecyclerViewAdapter(getContext(), arrayList);
         usedProductRecycler.setAdapter(adapter);
@@ -43,11 +39,17 @@ public class UsedProductFragment extends Fragment {
         GridLayoutManager manager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
         usedProductRecycler.setLayoutManager(manager);
 
+        FirebaseDatabase firebaseDatabase =
+
 //        usedProductLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
 //        usedProductAdapter = new LinearLayoutManager(usedProducts);
 
 //        usedProductRecycler.setAdapter(usedProductAdapter);
 //        usedProductRecycler.setLayoutManager(usedProductLayoutManager);
+    }
+
+    private void getUsedProducts() {
+
     }
 
     public void loadUsedProductItems() {

@@ -21,7 +21,7 @@ public class UsedProduct {
         this.likedCount = likedCount;
         this.milNumber = milNumber;
     }
-    
+
     public String getId() {
         return id;
     }

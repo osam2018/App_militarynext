@@ -5,7 +5,7 @@
       "password": "test",
       "grade": "일병",
       "name": "조영제",
-      "troopN]ame": "4284부대"
+      "troopName": "4284부대"
     },
     "admin": {
       "milNumber": "admin",
@@ -19,7 +19,7 @@
     "common": {
       "items": {
         "dkdlgjqm": {
-          "id": "dkdlgjqm"
+          "id": "dkdlgjqm",
           "name": "아이허브 단백질 보충제가 반값세일!",
           "webLink": "",
           "imageLink": "",
@@ -87,7 +87,5 @@
         }
       }
     }
-
-
   }
 }
