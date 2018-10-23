@@ -4,11 +4,14 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.user.mil.R;
+
+import butterknife.BindView;
 
 
 /**
@@ -20,6 +23,9 @@ import com.example.user.mil.R;
  * create an instance of this fragment.
  */
 public class CommonStoreFragment extends Fragment {
+
+    @BindView(R.id.custom_store_recycler)
+    RecyclerView customStoreRecyclerview;
 
     private OnFragmentInteractionListener mListener;
 

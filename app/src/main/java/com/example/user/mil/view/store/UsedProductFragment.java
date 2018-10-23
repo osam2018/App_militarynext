@@ -4,11 +4,20 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.user.mil.R;
+import com.example.user.mil.model.UsedProduct;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,21 +28,32 @@ import com.example.user.mil.R;
  * create an instance of this fragment.
  */
 public class UsedProductFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+
+    @BindView(R.id.used_product_recycler)
+    RecyclerView usedProductRecycler;
+
+    private RecyclerView.Adapter usedProductAdapter;
+    private RecyclerView.LayoutManager usedProductLayoutManager;
+    private List<UsedProduct> usedProducts = new ArrayList<>();
 
     private OnFragmentInteractionListener mListener;
+
+    public void initRecyclerView() {
+//        usedProductLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+//        usedProductAdapter = new LinearLayoutManager(usedProducts);
+
+        usedProductRecycler.setAdapter(usedProductAdapter);
+        usedProductRecycler.setLayoutManager(usedProductLayoutManager);
+    }
+
+    public void loadUsedProductItems() {
+
+    }
 
     public UsedProductFragment() {
         // Required empty public constructor
     }
-
 
     // TODO: Rename and change types and number of parameters
     public static UsedProductFragment newInstance() {
@@ -50,7 +70,12 @@ public class UsedProductFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_used_product, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_used_product, container, false);
+        ButterKnife.bind(this, view);
+
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

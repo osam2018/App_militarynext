@@ -1,7 +1,10 @@
 package com.example.user.mil;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.user.mil.view.store.StoreActivity;
 
 public class MainActivity extends AppCompatActivity {
 
