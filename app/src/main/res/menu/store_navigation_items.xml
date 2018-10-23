@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_store_common"
+        android:title="공동 구매"
+        android:icon="@drawable/ic_wc_black_24dp"
+       />
+    <item android:id="@+id/action_store_trade"
+        android:title="물품 거래"
+        android:icon="@drawable/ic_compare_arrows_black_24dp"
+        />
+    <item android:id="@+id/action_store_sell"
+        android:title="물품 팔기"
+        android:icon="@drawable/ic_add_black_24dp"
+        />
+</menu>
