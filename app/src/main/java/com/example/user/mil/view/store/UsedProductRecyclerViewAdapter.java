@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.user.mil.R;
 import com.example.user.mil.model.UsedProduct;
 
@@ -69,6 +70,7 @@ public class UsedProductRecyclerViewAdapter extends RecyclerView.Adapter<UsedPro
             price.setText(String.valueOf(item.getPrice()));
             likedCount.setText(String.valueOf(item.getLikedCount()));
             seeCount.setText(String.valueOf(item.getSeeCount()));
+            Glide.with(mContext).load(item.getImageLink()).centerCrop().into(imageUrl);
 
         }
 

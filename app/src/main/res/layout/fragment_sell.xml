@@ -1,14 +1,222 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.store.SellFragment">
+    android:layout_height="wrap_content"
+    android:background="#F1F1F1"
+    android:fillViewport="true"
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    tools:ignore="MissingPrefix">
+
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <View
+            android:id="@+id/sellTitlebar"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            fontPath="fonts/NOTOSANSKR-REGULAR.OTF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="물품 등록하기"
+            android:textColor="#ffffff"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/sellTitlebar"
+            app:layout_constraintLeft_toLeftOf="@+id/sellTitlebar"
+            app:layout_constraintRight_toRightOf="@+id/sellTitlebar"
+            app:layout_constraintTop_toTopOf="@+id/sellTitlebar" />
+
+        <View
+            android:id="@+id/sellProductNameView"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="4dp"
+            android:background="#ffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sellTitlebar" />
+
+        <ImageView
+            android:id="@+id/sellProductNameImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintLeft_toLeftOf="@+id/sellProductNameView"
+            app:layout_constraintTop_toTopOf="@+id/sellProductNameView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:includeFontPadding="false"
+            android:text="상품명"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/sellProductNameImageView"
+            app:layout_constraintLeft_toRightOf="@+id/sellProductNameImageView"
+            app:layout_constraintTop_toTopOf="@+id/sellProductNameImageView" />
+
+        <EditText
+            android:id="@+id/sellProductNameEditText"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="38dp"
+            android:hint="폴업바, 군용 백팩, CD플레이어"
+            android:includeFontPadding="false"
+            android:paddingStart="16dp"
+            android:paddingLeft="16dp"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toLeftOf="@+id/sellProductNameView"
+            app:layout_constraintRight_toRightOf="@+id/sellProductNameView"
+            app:layout_constraintTop_toTopOf="@+id/sellProductNameView" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:background="#F1F1F1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sellProductNameView" />
+
+
+        <View
+            android:id="@+id/sellProductStateView"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="4dp"
+            android:background="#ffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sellProductNameView" />
+
+
+        <TextView
+            android:id="@+id/sellProductDetailTitle"
+            fontPath="fonts/NOTOSANSKR-DEMILIGHT.OTF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="43dp"
+            android:includeFontPadding="false"
+            android:text="상세 정보"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sellProductNameView" />
+
+        <EditText
+            android:id="@+id/sellProductDetailEditText"
+            fontPath="fonts/NOTOSANSKR-DEMILIGHT.OTF"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#F2F2F2"
+            android:gravity="top"
+            android:hint="상품의 상세 정보를 적어주세요"
+            android:includeFontPadding="false"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/sellProductStateView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sellProductDetailTitle" />
+
+        <View
+            android:id="@+id/buyProductPriceView"
+            android:layout_width="0dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="4dp"
+            android:background="#ffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sellProductStateView" />
+
+        <ImageView
+            android:id="@+id/sellProductPriceImageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintLeft_toLeftOf="@+id/buyProductPriceView"
+            app:layout_constraintTop_toTopOf="@+id/buyProductPriceView" />
+
+        <TextView
+            android:id="@+id/sellProductPriceTitle"
+            fontPath="fonts/NOTOSANSKR-MEDIUM.OTF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:includeFontPadding="false"
+            android:text="가격 설정"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/sellProductPriceImageview"
+            app:layout_constraintLeft_toRightOf="@+id/sellProductPriceImageview"
+            app:layout_constraintTop_toTopOf="@+id/sellProductPriceImageview" />
+
+        <EditText
+            android:id="@+id/sellProductPriceEdittext"
+            fontPath="fonts/NOTOSANSKR-DEMILIGHT.OTF"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:hint="100,000"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sellProductPriceTitle" />
+
+        <Button
+            android:id="@+id/sellProductRegistButton"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buyProductPriceView"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/colorAccent"
+            android:text="등록"
+            android:textColor="#ffffff"
+            style="?android:attr/borderlessButtonStyle"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

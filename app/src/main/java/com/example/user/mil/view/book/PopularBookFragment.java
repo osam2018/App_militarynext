@@ -21,6 +21,11 @@ public class PopularBookFragment extends Fragment {
     public static PopularBookFragment newInstance() {
         PopularBookFragment fragment = new PopularBookFragment();
         return fragment;
+
+        //http://www.ypbooks.co.kr/ypbooks/book/kor/requestAjax.jsp?sMode=mdrecomm
+
+
+
     }
 
     @Override

@@ -50,7 +50,7 @@ public class ReviewFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        
+
         View view = inflater.inflate(R.layout.fragment_rank, container, false);
         reviewListView = (ListView) view.findViewById(R.id.book_review_listview);
         reviewAdapter = new ReviewAdapter(getContext(), reviewArrayList);
