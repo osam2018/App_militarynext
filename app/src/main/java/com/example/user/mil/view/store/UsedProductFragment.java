@@ -66,7 +66,8 @@ public class UsedProductFragment extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                Toast.makeText(getContext(), "이게 튕긴다고?",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), String.valueOf(databaseError),Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -23,6 +23,7 @@ public class RankFragment extends Fragment {
 
     private ArrayList<BookRank> bookRankArrayList = new ArrayList<BookRank>();
     private ListView bookListView;
+    RankAdapter rankAdapter;
 
     public RankFragment() {
         // Required empty public constructor
@@ -31,7 +32,6 @@ public class RankFragment extends Fragment {
     // TODO: Rename and change types and number of parameters
     public static RankFragment newInstance() {
         RankFragment fragment = new RankFragment();
-
         return fragment;
     }
 
@@ -47,14 +47,21 @@ public class RankFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_rank, container, false);
         bookListView = (ListView) view.findViewById(R.id.book_rank_listview);
-//        bookListView.setAdapter(new);
+        rankAdapter = new RankAdapter(getContext(), bookRankArrayList);
+        bookListView.setAdapter(rankAdapter);
         // Inflate the layout for this fragment
         return view;
     }
 
+    @Override
+    public void onStart() {
+       super.onStart();
+        getRankingData();
+    }
+
     public void getRankingData() {
-        FirebaseDatabase firebase = FirebaseDatabase.getInstance();
-        DatabaseReference databaseReference = firebase.getReference();
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference databaseReference = firebaseDatabase.getReference();
 
         databaseReference.child("user").addValueEventListener(new ValueEventListener() {
             @Override
@@ -62,7 +69,9 @@ public class RankFragment extends Fragment {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     User user =  (User)snapshot.getValue(User.class);
                     BookRank newBookRank = new BookRank(user.getTroopName() + user.getGrade() + user.getName(), user.getBookNum());
+                    bookRankArrayList.add(newBookRank);
                 }
+                rankAdapter.notifyDataSetChanged();
             }
 
             @Override
