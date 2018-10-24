@@ -96,7 +96,7 @@ public class SignupActivity extends AppCompatActivity {
             return ;
         }
 
-        databaseReference.child("user").addValueEventListener(new ValueEventListener() {
+        databaseReference.child("user").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 

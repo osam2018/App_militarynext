@@ -34,7 +34,7 @@ public class UsedProductFragment extends Fragment {
 
     private UsedProductRecyclerViewAdapter usedProductAdapter;
     private RecyclerView.LayoutManager usedProductLayoutManager;
-    private ArrayList<UsedProduct> usedProducts = new ArrayList<>();
+    private ArrayList<UsedProduct> usedProducts = new ArrayList<UsedProduct>();
 
     public void initRecyclerView() {
 
@@ -52,10 +52,8 @@ public class UsedProductFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                Toast.makeText(getContext(), "여기까진왔다",Toast.LENGTH_SHORT).show();
                 for(DataSnapshot data : dataSnapshot.getChildren()) {
-                    UsedProduct usedProduct = data.getValue(UsedProduct.class);
-                    Toast.makeText(getContext(), String.valueOf(usedProduct),Toast.LENGTH_SHORT).show();
+                    UsedProduct usedProduct = (UsedProduct)data.getValue(UsedProduct.class);
                     usedProducts.add(usedProduct);
                 }
                 usedProductAdapter.notifyDataSetChanged();
@@ -64,8 +62,7 @@ public class UsedProductFragment extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(getContext(), "이게 튕긴다고?",Toast.LENGTH_SHORT).show();
-                Toast.makeText(getContext(), String.valueOf(databaseError),Toast.LENGTH_SHORT).show();
+
             }
         });
     }
