@@ -52,7 +52,7 @@ public class UsedProductFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 for(DataSnapshot data : dataSnapshot.getChildren()) {
-                    UsedProduct usedProduct = (UsedProduct)data.getValue(UsedProduct.class);
+                    UsedProduct usedProduct = data.getValue(UsedProduct.class);
                     usedProducts.add(usedProduct);
                 }
                 usedProductAdapter.notifyDataSetChanged();

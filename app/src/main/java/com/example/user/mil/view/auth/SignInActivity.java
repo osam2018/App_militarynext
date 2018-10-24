@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.user.mil.MenuSelectActivity;
 import com.example.user.mil.R;
+import com.example.user.mil.application.MilitaryNextApplication;
 import com.example.user.mil.model.User;
 import com.example.user.mil.view.store.StoreActivity;
 import com.google.android.gms.common.util.VisibleForTesting;
@@ -73,7 +75,8 @@ public class SignInActivity extends AppCompatActivity {
                 User user = dataSnapshot.getValue(User.class);
 
                 if((user != null ? user.getPassword().length() : 0)  > 0 &&  user.getPassword().equals(password)) {
-                    Intent intent = new Intent(SignInActivity.this, StoreActivity.class);
+                    MilitaryNextApplication.setCurrentUser(user);
+                    Intent intent = new Intent(SignInActivity.this, MenuSelectActivity.class);
                     startActivity(intent);
                 } else{
                     Toast.makeText(getApplication(),"비밀번호가 틀렸습니다.", Toast.LENGTH_LONG ).show();

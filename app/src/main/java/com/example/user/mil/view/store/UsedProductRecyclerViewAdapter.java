@@ -70,7 +70,7 @@ public class UsedProductRecyclerViewAdapter extends RecyclerView.Adapter<UsedPro
             price.setText(String.valueOf(item.getPrice()));
             likedCount.setText(String.valueOf(item.getLikedCount()));
             seeCount.setText(String.valueOf(item.getSeeCount()));
-            Glide.with(mContext).load(item.getImageLink()).centerCrop().into(imageUrl);
+            Glide.with(mContext).load(item.getImageLink()).into(imageUrl);
 
         }
 

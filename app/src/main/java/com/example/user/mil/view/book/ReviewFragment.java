@@ -55,6 +55,7 @@ public class ReviewFragment extends Fragment {
         reviewListView = (ListView) view.findViewById(R.id.book_review_listview);
         reviewAdapter = new ReviewAdapter(getContext(), reviewArrayList);
         reviewListView.setAdapter(reviewAdapter);
+        getRaviewData();
         // Inflate the layout for this fragment
         return view;
 
@@ -68,7 +69,7 @@ public class ReviewFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    Review review =  (Review)snapshot.getValue(Review.class);
+                    Review review = snapshot.getValue(Review.class);
                     reviewArrayList.add(review);
                 }
                 reviewAdapter.notifyDataSetChanged();

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.user.mil.MenuSelectActivity;
 import com.example.user.mil.R;
 import com.example.user.mil.application.MilitaryNextApplication;
 import com.example.user.mil.model.User;
@@ -109,7 +110,7 @@ public class SignupActivity extends AppCompatActivity {
                 databaseReference.child("user").child(milNumber).setValue(newUser);
                 MilitaryNextApplication.setCurrentUser(newUser);
 
-                Intent intent = new Intent(getApplicationContext(), StoreActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MenuSelectActivity.class);
                 startActivity(intent);
             }
 
