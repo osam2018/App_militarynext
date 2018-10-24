@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.example.user.mil.R;
 
@@ -18,8 +19,8 @@ import butterknife.ButterKnife;
 
 public class CommonStoreFragment extends Fragment {
 
-    @BindView(R.id.custom_store_recycler)
-    RecyclerView customStoreRecyclerview;
+    @BindView(R.id.custom_product_listview)
+    ListView customStoreRecyclerview;
 
 
     public CommonStoreFragment() {

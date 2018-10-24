@@ -35,8 +35,6 @@ public class StoreActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         BottomBar bottomNavigationMenu = (BottomBar) findViewById(R.id.store_bottom_navigation);
-        Log.d("dddddd",String.valueOf(bottomNavigationMenu));
-
         bottomNavigationMenu.setItems(R.menu.store_navigation_items);
         bottomNavigationMenu.setOnMenuTabClickListener(new OnMenuTabClickListener() {
             @Override

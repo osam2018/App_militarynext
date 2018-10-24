@@ -6,4 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".view.book.BookActivity">
 
+    <FrameLayout
+        android:id="@+id/book_fragment_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/book_bottom_navigation"
+        />
+
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/book_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_fragment_container"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/store_navigation_items"
+        />
+
 </android.support.constraint.ConstraintLayout>

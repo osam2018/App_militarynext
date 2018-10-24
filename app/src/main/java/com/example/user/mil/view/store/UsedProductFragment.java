@@ -47,7 +47,6 @@ public class UsedProductFragment extends Fragment {
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference mDatabase = firebaseDatabase.getReference();
 
-        Toast.makeText(getContext(), String.valueOf(mDatabase.child("store").child("used").child("items")),Toast.LENGTH_SHORT).show();
         mDatabase.child("store").child("used").child("items").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -57,7 +56,6 @@ public class UsedProductFragment extends Fragment {
                     usedProducts.add(usedProduct);
                 }
                 usedProductAdapter.notifyDataSetChanged();
-                Log.d("으악","이이");
             }
 
             @Override
