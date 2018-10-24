@@ -37,6 +37,8 @@ public class UsedProductFragment extends Fragment {
 
     public void initRecyclerView() {
 
+        Log.d("버터나이프", String.valueOf(usedProductRecycler));
+
         usedProductAdapter = new UsedProductRecyclerViewAdapter(getContext(), usedProducts);
         usedProductRecycler.setAdapter(usedProductAdapter);
 
@@ -85,6 +87,8 @@ public class UsedProductFragment extends Fragment {
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_used_product, container, false);
+
+//        RecyclerView usedProductRecycler = (RecyclerView) findviewById(R.id.used_product_recycler);
         ButterKnife.bind(this, view);
 
         initRecyclerView();
