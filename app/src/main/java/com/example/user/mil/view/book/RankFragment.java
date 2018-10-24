@@ -1,16 +1,28 @@
 package com.example.user.mil.view.book;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.example.user.mil.R;
+import com.example.user.mil.model.BookRank;
+import com.example.user.mil.model.User;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 public class RankFragment extends Fragment {
+
+    private ArrayList<BookRank> bookRankArrayList = new ArrayList<BookRank>();
+    private ListView bookListView;
 
     public RankFragment() {
         // Required empty public constructor
@@ -32,8 +44,33 @@ public class RankFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        View view = inflater.inflate(R.layout.fragment_rank, container, false);
+        bookListView = (ListView) view.findViewById(R.id.book_rank_listview);
+//        bookListView.setAdapter(new);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_rank, container, false);
+        return view;
+    }
+
+    public void getRankingData() {
+        FirebaseDatabase firebase = FirebaseDatabase.getInstance();
+        DatabaseReference databaseReference = firebase.getReference();
+
+        databaseReference.child("user").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    User user =  (User)snapshot.getValue(User.class);
+                    BookRank newBookRank = new BookRank(user.getTroopName() + user.getGrade() + user.getName(), user.getBookNum());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
     }
 
 }

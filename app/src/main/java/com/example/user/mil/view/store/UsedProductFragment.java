@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.user.mil.R;
 import com.example.user.mil.model.UsedProduct;
@@ -37,8 +38,6 @@ public class UsedProductFragment extends Fragment {
 
     public void initRecyclerView() {
 
-
-
         usedProductAdapter = new UsedProductRecyclerViewAdapter(getContext(), usedProducts);
         usedProductRecycler.setAdapter(usedProductAdapter);
 
@@ -48,12 +47,17 @@ public class UsedProductFragment extends Fragment {
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference mDatabase = firebaseDatabase.getReference();
 
+        Toast.makeText(getContext(), "sssss",Toast.LENGTH_SHORT).show();
+
         mDatabase.child("store").child("used").child("items").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
+                Toast.makeText(getContext(), "여기까진왔다",Toast.LENGTH_SHORT).show();
+
                 for(DataSnapshot data : dataSnapshot.getChildren()) {
                     UsedProduct usedProduct = data.getValue(UsedProduct.class);
+                    Toast.makeText(getContext(), String.valueOf(usedProduct),Toast.LENGTH_SHORT).show();
                     usedProducts.add(usedProduct);
                 }
                 usedProductAdapter.notifyDataSetChanged();

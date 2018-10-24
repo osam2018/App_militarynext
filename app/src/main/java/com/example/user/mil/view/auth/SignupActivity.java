@@ -105,7 +105,7 @@ public class SignupActivity extends AppCompatActivity {
                     return ;
                 }
 
-                User newUser = new User(milNumber,passwoprd,name,grade,troop);
+                User newUser = new User(milNumber,passwoprd,name,grade,troop,0);
                 databaseReference.child("user").child(milNumber).setValue(newUser);
                 MilitaryNextApplication.setCurrentUser(newUser);
 
