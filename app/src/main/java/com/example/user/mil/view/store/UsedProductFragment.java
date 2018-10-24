@@ -47,14 +47,12 @@ public class UsedProductFragment extends Fragment {
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference mDatabase = firebaseDatabase.getReference();
 
-        Toast.makeText(getContext(), "sssss",Toast.LENGTH_SHORT).show();
-
-        mDatabase.child("store").child("used").child("items").addValueEventListener(new ValueEventListener() {
+        Toast.makeText(getContext(), String.valueOf(mDatabase.child("store").child("used").child("items")),Toast.LENGTH_SHORT).show();
+        mDatabase.child("store").child("used").child("items").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 Toast.makeText(getContext(), "여기까진왔다",Toast.LENGTH_SHORT).show();
-
                 for(DataSnapshot data : dataSnapshot.getChildren()) {
                     UsedProduct usedProduct = data.getValue(UsedProduct.class);
                     Toast.makeText(getContext(), String.valueOf(usedProduct),Toast.LENGTH_SHORT).show();
@@ -70,7 +68,6 @@ public class UsedProductFragment extends Fragment {
                 Toast.makeText(getContext(), String.valueOf(databaseError),Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
 
