@@ -66,22 +66,23 @@ public class SignInActivity extends AppCompatActivity {
 
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference databaseReference = firebaseDatabase.getReference();
-        databaseReference.child(milNumber).addValueEventListener(new ValueEventListener() {
+        databaseReference.child("user").child(milNumber).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 User user = dataSnapshot.getValue(User.class);
-                if(user.getPassword().equals(password)) {
+
+                if((user != null ? user.getPassword().length() : 0)  > 0 &&  user.getPassword().equals(password)) {
                     Intent intent = new Intent(SignInActivity.this, StoreActivity.class);
                     startActivity(intent);
                 } else{
-                    Toast.makeText(getApplicationContext(),"비밀번호가 틀렸습니다.", Toast.LENGTH_LONG );
+                    Toast.makeText(getApplication(),"비밀번호가 틀렸습니다.", Toast.LENGTH_LONG ).show();
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(getApplicationContext(),"해당 군번으로 가입된 계정이 존재하지 않습니다.", Toast.LENGTH_LONG );
+                Toast.makeText(getApplication(),"해당 군번으로 가입된 계정이 존재하지 않습니다.", Toast.LENGTH_LONG ).show();
             }
         });
     }

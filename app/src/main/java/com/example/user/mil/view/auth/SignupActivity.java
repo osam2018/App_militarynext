@@ -91,7 +91,7 @@ public class SignupActivity extends AppCompatActivity {
         }
 
         if(!passwoprd.equals(repeatPsssword)) {
-            Toast.makeText(getApplicationContext(), "패스워드가 일치하지 않습니다.",Toast.LENGTH_SHORT);
+            Toast.makeText(getApplicationContext(), "패스워드가 일치하지 않습니다.",Toast.LENGTH_SHORT).show();
             return ;
         }
 
@@ -99,24 +99,24 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                if(dataSnapshot == null)  {
-                    User newUser = new User(milNumber,passwoprd,name,grade,troop);
-                    databaseReference.child("user").child(milNumber).setValue(newUser);
-                    MilitaryNextApplication.setCurrentUser(newUser);
-
-                    Intent intent = new Intent(getApplicationContext(), StoreActivity.class);
-                    startActivity(intent);
-
-                } else {
-                    Toast.makeText(getApplicationContext(), "이미 존재하는 회원입니다",Toast.LENGTH_SHORT);
+                if(dataSnapshot.exists())  {
+                    Toast.makeText(getApplicationContext(), "이미 존재하는 회원입니다",Toast.LENGTH_SHORT).show();
                     return ;
                 }
+
+                User newUser = new User(milNumber,passwoprd,name,grade,troop);
+                databaseReference.child("user").child(milNumber).setValue(newUser);
+                MilitaryNextApplication.setCurrentUser(newUser);
+
+                Intent intent = new Intent(getApplicationContext(), StoreActivity.class);
+                startActivity(intent);
+
 
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(getApplicationContext(), "인터넷 연결을 확인해주세요",Toast.LENGTH_SHORT);
+                Toast.makeText(getApplicationContext(), "인터넷 연결을 확인해주세요",Toast.LENGTH_SHORT).show();
                 return ;
             }
         });
