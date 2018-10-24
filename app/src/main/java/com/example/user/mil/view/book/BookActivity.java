@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.FrameLayout;
 
 import com.example.user.mil.R;
 import com.example.user.mil.view.store.CommonStoreFragment;
@@ -13,9 +14,13 @@ import com.example.user.mil.view.store.UsedProductFragment;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnMenuTabClickListener;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class BookActivity extends AppCompatActivity {
+
+    @BindView(R.id.book_fragment_container)
+    FrameLayout frameLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
