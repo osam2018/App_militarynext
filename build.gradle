@@ -5,7 +5,7 @@ buildscript {
     repositories {
         google()
         jcenter()
-        mavenCentral()
+
         maven {
             url 'https://maven.fabric.io/public'
         }
@@ -13,7 +13,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.1'
         classpath 'com.google.gms:google-services:4.1.0'
-        classpath 'com.jakewharton:butterknife-gradle-plugin:9.0.0-rc1'
+
 
         // Check for v3.1.2 or higher
         classpath 'com.google.gms:google-services:4.1.0'

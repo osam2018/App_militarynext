@@ -51,12 +51,22 @@ public class SignInActivity extends AppCompatActivity {
 
     public void signin() {
 
-        final String milNumber5 = milNumberText.getText().toString();
+        final String milNumber = milNumberText.getText().toString();
         final String password = passwordText.getText().toString();
+
+        if(milNumber.length() == 0) {
+            Toast.makeText(getApplicationContext(), "군번을 입력해주세요",Toast.LENGTH_SHORT).show();
+            return ;
+        }
+
+        if(password.length() == 0) {
+            Toast.makeText(getApplicationContext(), "패스워드를 입력해주세요",Toast.LENGTH_SHORT).show();
+            return ;
+        }
 
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference databaseReference = firebaseDatabase.getReference();
-        databaseReference.child(milNumber5).addValueEventListener(new ValueEventListener() {
+        databaseReference.child(milNumber).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 

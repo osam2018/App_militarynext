@@ -56,16 +56,39 @@ public class SignupActivity extends AppCompatActivity {
 
     public void signup() {
 
-        String milNumber = milNumberEditText.getText().toString();
-        String name = nameEditText.getText().toString();
-        String passwoprd = signupPasswordEditText.getText().toString();
+        final String milNumber = milNumberEditText.getText().toString();
+        final String name = nameEditText.getText().toString();
+        final String passwoprd = signupPasswordEditText.getText().toString();
         String repeatPsssword = signupPasswordRepeatEditText.getText().toString();
-        String grade = signupgradeEditText.getText().toString();
-        String troop = signupTroopEditText.getText().toString();
-
+        final String grade = signupgradeEditText.getText().toString();
+        final String troop = signupTroopEditText.getText().toString();
 
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference databaseReference = firebaseDatabase.getReference();
+        final DatabaseReference databaseReference = firebaseDatabase.getReference();
+
+        if(milNumber.length() == 0) {
+            Toast.makeText(getApplicationContext(), "군번을 입력해주세요",Toast.LENGTH_SHORT).show();
+            return ;
+        }
+        if(name.length() == 0) {
+            Toast.makeText(getApplicationContext(), "이름을 입력해주세요",Toast.LENGTH_SHORT).show();
+            return ;
+        }
+        if(passwoprd.length() == 0) {
+            Toast.makeText(getApplicationContext(), "비밀번호를 입력해주세요",Toast.LENGTH_SHORT).show();
+            return ;
+        }if(repeatPsssword.length() == 0) {
+            Toast.makeText(getApplicationContext(), "비밀번호를 입력해주세요",Toast.LENGTH_SHORT).show();
+            return ;
+        }
+        if(grade.length() == 0) {
+            Toast.makeText(getApplicationContext(), "계끕을 입력해주세요",Toast.LENGTH_SHORT).show();
+            return ;
+        }
+        if(troop.length() == 0) {
+            Toast.makeText(getApplicationContext(), "부대명을 입력해주세요",Toast.LENGTH_SHORT).show();
+            return ;
+        }
 
         if(!passwoprd.equals(repeatPsssword)) {
             Toast.makeText(getApplicationContext(), "패스워드가 일치하지 않습니다.",Toast.LENGTH_SHORT);
@@ -75,8 +98,20 @@ public class SignupActivity extends AppCompatActivity {
         databaseReference.child("user").child(milNumber).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Toast.makeText(getApplicationContext(), "이미 존재하는 회원입니다",Toast.LENGTH_SHORT);
-                return ;
+
+                if(dataSnapshot == null)  {
+                    User newUser = new User(milNumber,passwoprd,name,grade,troop);
+                    databaseReference.child("user").child(milNumber).setValue(newUser);
+                    MilitaryNextApplication.setCurrentUser(newUser);
+
+                    Intent intent = new Intent(getApplicationContext(), StoreActivity.class);
+                    startActivity(intent);
+
+                } else {
+                    Toast.makeText(getApplicationContext(), "이미 존재하는 회원입니다",Toast.LENGTH_SHORT);
+                    return ;
+                }
+
             }
 
             @Override
@@ -86,12 +121,7 @@ public class SignupActivity extends AppCompatActivity {
             }
         });
 
-        User newUser = new User(milNumber,passwoprd,name,grade,troop);
-        databaseReference.child("user").child(milNumber).setValue(newUser);
-        MilitaryNextApplication.setCurrentUser(newUser);
 
-        Intent intent = new Intent(this, StoreActivity.class);
-        startActivity(intent);
 
     }
 

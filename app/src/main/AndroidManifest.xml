@@ -38,7 +38,8 @@
         <!-- </intent-filter> -->
         <!-- </service> -->
         <activity android:name=".MenuSelectActivity" />
-        <activity android:name=".view.store.DeleteProductActivity"></activity>
+        <activity android:name=".view.store.DeleteProductActivity" />
+        <activity android:name=".view.book.BookActivity"></activity>
     </application>
 
 </manifest>
