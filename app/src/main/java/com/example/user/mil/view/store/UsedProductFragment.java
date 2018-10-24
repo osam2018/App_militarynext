@@ -37,7 +37,7 @@ public class UsedProductFragment extends Fragment {
 
     public void initRecyclerView() {
 
-        Log.d("버터나이프", String.valueOf(usedProductRecycler));
+
 
         usedProductAdapter = new UsedProductRecyclerViewAdapter(getContext(), usedProducts);
         usedProductRecycler.setAdapter(usedProductAdapter);
@@ -51,8 +51,11 @@ public class UsedProductFragment extends Fragment {
         mDatabase.child("store").child("used").child("items").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                UsedProduct usedProduct = dataSnapshot.getValue(UsedProduct.class);
-                usedProducts.add(usedProduct);
+
+                for(DataSnapshot data : dataSnapshot.getChildren()) {
+                    UsedProduct usedProduct = data.getValue(UsedProduct.class);
+                    usedProducts.add(usedProduct);
+                }
                 usedProductAdapter.notifyDataSetChanged();
                 Log.d("으악","이이");
             }
@@ -87,16 +90,16 @@ public class UsedProductFragment extends Fragment {
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_used_product, container, false);
-
-//        RecyclerView usedProductRecycler = (RecyclerView) findviewById(R.id.used_product_recycler);
         ButterKnife.bind(this, view);
+
+        usedProductRecycler = (RecyclerView) view.findViewById(R.id.used_product_recycler);
+        initRecyclerView();
         return view;
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        initRecyclerView();
     }
 
 

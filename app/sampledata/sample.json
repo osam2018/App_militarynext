@@ -5,14 +5,32 @@
       "password": "test",
       "grade": "일병",
       "name": "조영제",
-      "troopName": "4284부대"
+      "troopName": "4284부대",
+      "bookNum": 7
+    },
+    "17-76087454":  {
+      "milNumber": "17-76087454",
+      "password": "test",
+      "grade": "병장",
+      "name": "공병국",
+      "troopName": "4284부대",
+      "bookNum": 15
+    },
+    "17-76087467":  {
+      "milNumber": "17-76087467",
+      "password": "test",
+      "grade": "병장",
+      "name": "서승완",
+      "troopName": "4284부대",
+      "bookNum": 20
     },
     "admin": {
       "milNumber": "admin",
       "password": "admin",
       "grade": "병장",
       "name": "관리자",
-      "troopName": "국방부"
+      "troopName": "국방부",
+      "bookNum": 72
     }
   },
   "store": {
@@ -87,5 +105,6 @@
         }
       }
     }
-  }
+  },
+
 }
