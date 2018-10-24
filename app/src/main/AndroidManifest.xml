@@ -39,7 +39,7 @@
         <!-- </service> -->
         <activity android:name=".MenuSelectActivity" />
         <activity android:name=".view.store.DeleteProductActivity" />
-        <activity android:name=".view.book.BookActivity"></activity>
+        <activity android:name=".view.book.BookActivity" />
     </application>
 
 </manifest>

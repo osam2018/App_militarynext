@@ -77,7 +77,8 @@ public class SignupActivity extends AppCompatActivity {
         if(passwoprd.length() == 0) {
             Toast.makeText(getApplicationContext(), "비밀번호를 입력해주세요",Toast.LENGTH_SHORT).show();
             return ;
-        }if(repeatPsssword.length() == 0) {
+        }
+        if(repeatPsssword.length() == 0) {
             Toast.makeText(getApplicationContext(), "비밀번호를 입력해주세요",Toast.LENGTH_SHORT).show();
             return ;
         }
@@ -95,11 +96,11 @@ public class SignupActivity extends AppCompatActivity {
             return ;
         }
 
-        databaseReference.child("user").child(milNumber).addValueEventListener(new ValueEventListener() {
+        databaseReference.child("user").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                if(dataSnapshot.exists())  {
+                if(dataSnapshot.hasChild(milNumber))  {
                     Toast.makeText(getApplicationContext(), "이미 존재하는 회원입니다",Toast.LENGTH_SHORT).show();
                     return ;
                 }
@@ -110,8 +111,6 @@ public class SignupActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(getApplicationContext(), StoreActivity.class);
                 startActivity(intent);
-
-
             }
 
             @Override
