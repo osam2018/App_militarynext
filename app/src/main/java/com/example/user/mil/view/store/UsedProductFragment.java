@@ -1,5 +1,6 @@
 package com.example.user.mil.view.store;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -7,11 +8,13 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.user.mil.R;
+import com.example.user.mil.application.MilitaryNextApplication;
 import com.example.user.mil.model.UsedProduct;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -46,7 +49,22 @@ public class UsedProductFragment extends Fragment {
         int spanCount = 2; // 2 columns
         int spacing = 12; // 50px
         boolean includeEdge = false;
+
         usedProductRecycler.addItemDecoration(new GridSpacingItemDecoration(spanCount, spacing, includeEdge));
+        usedProductRecycler.addOnItemTouchListener(
+                new RecyclerItemClickListener(getContext(), usedProductRecycler ,new RecyclerItemClickListener.OnItemClickListener() {
+                    @Override public void onItemClick(View view, int position) {
+                        // do whatever
+                        MilitaryNextApplication.setCurrentUsedProduct(usedProducts.get(position));
+                        Intent intent = new Intent(getContext(), DetailProductActivity.class);
+                        startActivity(intent);
+                    }
+
+                    @Override public void onLongItemClick(View view, int position) {
+                        // do whatever
+                    }
+                })
+        );
 
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference mDatabase = firebaseDatabase.getReference();

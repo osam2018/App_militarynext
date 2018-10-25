@@ -23,7 +23,6 @@
         <activity android:name=".view.troop.TroopActivity" />
         <activity android:name=".view.community.CommunityActivity" />
         <activity android:name=".MenuSelectActivity" />
-        <activity android:name=".view.store.DeleteProductActivity" />
         <activity android:name=".view.book.BookActivity" />
 
         <!-- <service -->
@@ -42,6 +41,7 @@
         <!-- </service> -->
 
         <activity android:name=".view.community.UploadActivity" />
+        <activity android:name=".view.store.DetailProductActivity"></activity>
     </application>
 
 </manifest>

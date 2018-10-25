@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.user.mil.R;
+import com.example.user.mil.application.MilitaryNextApplication;
 import com.example.user.mil.model.CommonProduct;
 import com.example.user.mil.model.UsedProduct;
 
@@ -77,7 +78,8 @@ public class UsedProductRecyclerViewAdapter extends RecyclerView.Adapter<UsedPro
 
         @Override
         public void onClick(View v) {
-            Log.d("OnClikcK", "으어");
+
+
         }
     }
 
@@ -93,6 +95,7 @@ public class UsedProductRecyclerViewAdapter extends RecyclerView.Adapter<UsedPro
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
         viewHolder.setData(models.get(position));
+
     }
 
 

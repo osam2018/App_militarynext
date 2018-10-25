@@ -2,10 +2,12 @@ package com.example.user.mil.application;
 
 import android.app.Application;
 
+import com.example.user.mil.model.UsedProduct;
 import com.example.user.mil.model.User;
 
 public class MilitaryNextApplication extends Application {
     private static User currentUser = new User();
+    private static UsedProduct currentUsedProduct = new UsedProduct();
 
     @Override
     public void onCreate() {
@@ -13,8 +15,6 @@ public class MilitaryNextApplication extends Application {
         // 폰트 설정
     }
 
-    // retrofit 설정
-    // firebase 설정
 
     public static User getCurrentUser() {
         return currentUser;
@@ -22,6 +22,11 @@ public class MilitaryNextApplication extends Application {
 
     public static void setCurrentUser(User user) {
         currentUser = user;
+    }
+
+    public static UsedProduct getCurrentUsedProduct() { return currentUsedProduct ; }
+    public static void setCurrentUsedProduct(UsedProduct usedProduct) {
+        currentUsedProduct = usedProduct;
     }
 
 }
