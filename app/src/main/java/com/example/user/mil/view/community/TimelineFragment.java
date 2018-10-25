@@ -37,6 +37,12 @@ public class TimelineFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_timeline, container, false);
     }
 
+    public void getTimeline() {
+
+    }
+
+
+
 
 
 }

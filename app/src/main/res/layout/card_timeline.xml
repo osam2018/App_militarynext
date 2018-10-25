@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="2dp"
+    android:background="#0000000"
+    android:paddingBottom="2dp">
+
+    <TextView
+        android:id="@+id/tileline_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        />
+
+    <TextView
+        android:id="@+id/tileline_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tileline_title"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/timeline_divide"
+        />
+
+    <View
+        android:id="@+id/timeline_divide"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#f2f2f2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tileline_description"
+       />
+
+   <ImageView
+       android:id="@+id/timeline_see_count_imageview"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@drawable/ic_remove_red_eye_black_24dp"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/timeline_divide"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:layout_marginLeft="4dp"
+       android:layout_marginStart="4dp"
+       />
+
+    <TextView
+        android:id="@+id/timeline_see_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/timeline_divide"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="+id/timeline_seeCountImageView"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+    />
+
+    <ImageView
+        android:id="@+id/timeline_review_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_rate_review_black_24dp"
+        app:layout_constraintLeft_toRightOf="@+id/timeline_see_count"
+        app:layout_constraintTop_toBottomOf="@+id/timeline_divide"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        />
+
+    <TextView
+        android:id="@+id/timeline_review_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/timeline_divide"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="+id/timeline_review_imageview"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        />
+
+</android.support.constraint.ConstraintLayout>
