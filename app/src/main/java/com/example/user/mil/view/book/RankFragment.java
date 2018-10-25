@@ -64,7 +64,7 @@ public class RankFragment extends Fragment {
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference databaseReference = firebaseDatabase.getReference();
 
-        databaseReference.child("user").addListenerForSingleValueEvent(new ValueEventListener() {
+        databaseReference.child("user").orderByChild("bookNum").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {

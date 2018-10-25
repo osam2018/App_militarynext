@@ -65,7 +65,7 @@ public class TroopActivity extends AppCompatActivity {
         });
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.troop_fragment_container, TimelineFragment.newInstance());
+        transaction.replace(R.id.troop_fragment_container, TroopNoticeFragment.newInstance());
         transaction.commit();
     }
 

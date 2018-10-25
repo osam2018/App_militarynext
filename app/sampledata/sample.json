@@ -232,27 +232,24 @@
     "notice": {
       "rhdwldlfqjs": {
         "id": "rhdwldlfqjs",
-        "content": "상병 조영제 중대장실 찾아올것",
-        "isDeleted": true;
+        "title": "상병 조영제 중대장실 찾아올것",
+        "isDeleted": true
       },
       "rhdwldlqjs": {
         "id": "rhdwldlqjs",
-        "content": "국방 오픈소스 소프트웨어 대회에 참가 희망하느 사람 중대장실로 찾아올것",
-        "isDeleted": false;
+        "title": "국방 오픈소스 소프트웨어 대회에 참가 희망하느 사람 중대장실로 찾아올것",
+        "isDeleted": false
       },
       "rhdwltkaqjs": {
         "id": "rhdwltkaqjs",
-        "content": "이번주 토요일 독도수호 마라톤 참가 희망자 조사하는중 ",
-        "isDeleted": false;
+        "title": "이번주 토요일 독도수호 마라톤 참가 희망자 조사하는중 ",
+        "isDeleted": false
       },
       "dlqnfdksroa": {
         "id": "dlqnfdksroa",
-        "content": "407호 생활관 청소상태 불량. 근무나갈시 정리정돈요망 ",
-        "isDeleted": false;
+        "title": "407호 생활관 청소상태 불량. 근무나갈시 정리정돈요망 ",
+        "isDeleted": false
       }
-    },
-    "group": {
-
     }
   }
 }

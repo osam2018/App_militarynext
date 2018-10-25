@@ -19,17 +19,16 @@
         android:textSize="18sp"
         />
 
-    <RatingBar
+    <TextView
         android:id="@+id/card_book_rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toRightOf="@+id/card_book_name"
         app:layout_constraintTop_toTopOf="@+id/card_book_name"
         app:layout_constraintBottom_toBottomOf="@+id/card_book_name"
+        android:textSize="12sp"
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
-        android:isIndicator="false"
-        style="@style/foodRatingBar"
         />
 
     <TextView

@@ -1,37 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MenuSelectActivity"
-    android:layout_weight="3"
     android:orientation="vertical"
     >
 
     <Button
         android:id="@+id/menu_select_market"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/menu_book_select"
+        app:layout_constraintBottom_toTopOf="@+id/menu_commmunity_select"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
         android:text="장터마당"
-        android:layout_weight="1"
-
         />
 
     <Button
         android:id="@+id/menu_book_select"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/menu_select_market"
+        app:layout_constraintBottom_toTopOf="@+id/menu_troop_select"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
         android:text="독서마당"
-        android:layout_weight="1"
         />
 
     <Button
         android:id="@+id/menu_commmunity_select"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_select_market"
+        app:layout_constraintRight_toLeftOf="@+id/menu_troop_select"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
         android:text="커뮤니티"
-        android:layout_weight="1"
         />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/menu_troop_select"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/menu_commmunity_select"
+        app:layout_constraintTop_toBottomOf="@+id/menu_book_select"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:text="부대마당"
+        />
+
+
+</android.support.constraint.ConstraintLayout>
