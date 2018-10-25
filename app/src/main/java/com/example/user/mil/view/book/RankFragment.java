@@ -68,7 +68,7 @@ public class RankFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     User user = snapshot.getValue(User.class);
-                    BookRank newBookRank = new BookRank(user.getTroopName() + user.getGrade() + user.getName(), user.getBookNum());
+                    BookRank newBookRank = new BookRank(user.getTroopName() + " " + user.getGrade() + " " + user.getName(), user.getBookNum());
                     bookRankArrayList.add(newBookRank);
                 }
                 rankAdapter.notifyDataSetChanged();
