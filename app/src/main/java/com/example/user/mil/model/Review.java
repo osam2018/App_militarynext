@@ -2,18 +2,26 @@ package com.example.user.mil.model;
 
 public class Review {
 
+    private String id;
     private float startRate;
     private String bookName;
     private String description;
 
-    public Review() {
+    public Review(String id, float startRate, String bookName, String description) {
 
-    }
-
-    public Review(float startRate, String bookName, String description) {
+        this.id = id;
         this.startRate = startRate;
         this.bookName = bookName;
         this.description = description;
+    }
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public float getStartRate() {
@@ -39,5 +47,4 @@ public class Review {
     public void setDescription(String description) {
         this.description = description;
     }
-
 }

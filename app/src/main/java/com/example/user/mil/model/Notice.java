@@ -5,13 +5,16 @@ public class Notice {
     private String id;
     private String title;
     private String webLink;
-    private String description;
 
-    public Notice(String id, String title, String webLink, String description) {
+    public Notice() {
+
+    }
+
+    public Notice(String id, String title, String webLink) {
         this.id = id;
         this.title = title;
         this.webLink = webLink;
-        this.description = description;
+
     }
 
     public String getId() {
@@ -38,11 +41,5 @@ public class Notice {
         this.webLink = webLink;
     }
 
-    public String getDescription() {
-        return description;
-    }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }

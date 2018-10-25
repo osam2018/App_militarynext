@@ -1,4 +1,4 @@
-package com.example.user.mil.view.book;
+package com.example.user.mil.view.community;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,21 +7,20 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.user.mil.R;
 import com.example.user.mil.model.Book;
-import com.example.user.mil.model.BookRank;
+import com.example.user.mil.view.book.PopularBookAdapter;
 
 import java.util.ArrayList;
 
-public class PopularBookAdapter extends BaseAdapter {
+public class NoticeAdapter extends BaseAdapter {
 
     private Context context;
     private ArrayList<Book> models;
 
-    public PopularBookAdapter(Context context, ArrayList<Book> models ) {
+    public NoticeAdapter(Context context, ArrayList<Book> models ) {
         this.context = context;
         this.models = models;
     }
@@ -44,17 +43,17 @@ public class PopularBookAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        ViewHolder holder;
+        PopularBookAdapter.ViewHolder holder;
 
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) parent.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
             convertView = inflater.inflate(R.layout.card_book, parent, false);
-            holder = new ViewHolder(convertView);
+            holder = new PopularBookAdapter.ViewHolder(convertView);
 
             convertView.setTag(holder);
         } else {
-            holder = (ViewHolder) convertView.getTag();
+            holder = (PopularBookAdapter.ViewHolder) convertView.getTag();
         }
 
         Book model = models.get(position);
