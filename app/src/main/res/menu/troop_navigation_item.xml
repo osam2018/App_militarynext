@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <item android:id="@+id/action_troop_notice"
+        android:title="부대 공지"
+        android:icon="@drawable/ic_volume_up_black_24dp"
+        />
+    <item android:id="@+id/action_troop_planner"
+        android:title="내 일정"
+        android:icon="@drawable/ic_event_note_black_24dp"
+        />
+    <item android:id="@+id/action_troop_group"
+        android:title="부대 모임"
+        android:icon="@drawable/ic_group_black_24dp"
+        />
 </menu>
