@@ -5,17 +5,17 @@ public class TimeLine {
     private String id;
     private String title;
     private String description;
-    private String nickName;
+    private String userid;
     private int seeNum;
-    private int likedNum;
+    private int reviewNum;
 
-    public TimeLine(String id, String title, String description, String nickName, int seeNum, int likedNum) {
+    public TimeLine(String id, String title, String description, String userid, int seeNum, int reviewNum) {
         this.id = id;
         this.title = title;
         this.description = description;
-        this.nickName = nickName;
+        this.userid = userid;
         this.seeNum = seeNum;
-        this.likedNum = likedNum;
+        this.reviewNum = reviewNum;
     }
 
     public String getId() {
@@ -42,14 +42,6 @@ public class TimeLine {
         this.description = description;
     }
 
-    public String getNickName() {
-        return nickName;
-    }
-
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
-    }
-
     public int getSeeNum() {
         return seeNum;
     }
@@ -58,13 +50,19 @@ public class TimeLine {
         this.seeNum = seeNum;
     }
 
-    public int getLikedNum() {
-        return likedNum;
+    public String getUserid() {
+        return userid;
     }
 
-    public void setLikedNum(int likedNum) {
-        this.likedNum = likedNum;
+    public void setUserid(String userid) {
+        this.userid = userid;
     }
 
+    public int getReviewNum() {
+        return reviewNum;
+    }
 
+    public void setReviewNum(int reviewNum) {
+        this.reviewNum = reviewNum;
+    }
 }

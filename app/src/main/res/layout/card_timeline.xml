@@ -4,7 +4,7 @@
     android:layout_height="200dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingTop="2dp"
-    android:background="#0000000"
+    android:background="#ffffff"
     android:paddingBottom="2dp">
 
     <TextView
@@ -66,7 +66,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/timeline_divide"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="+id/timeline_seeCountImageView"
+        app:layout_constraintLeft_toRightOf="@+id/timeline_see_count_imageview"
         android:layout_marginLeft="4dp"
         android:layout_marginStart="4dp"
     />
@@ -89,7 +89,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/timeline_divide"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="+id/timeline_review_imageview"
+        app:layout_constraintLeft_toRightOf="@+id/timeline_review_imageview"
         android:layout_marginLeft="4dp"
         android:layout_marginStart="4dp"
         />

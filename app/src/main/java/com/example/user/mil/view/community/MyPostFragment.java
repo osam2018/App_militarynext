@@ -10,16 +10,15 @@ import android.view.ViewGroup;
 
 import com.example.user.mil.R;
 
+public class MyPostFragment extends Fragment {
 
-public class NoticeFragment extends Fragment {
-
-
-    public NoticeFragment() {
+    public MyPostFragment() {
         // Required empty public constructor
     }
 
-    public static NoticeFragment newInstance() {
-        NoticeFragment fragment = new NoticeFragment();
+    // TODO: Rename and change types and number of parameters
+    public static MyPostFragment newInstance() {
+        MyPostFragment fragment = new MyPostFragment();
         return fragment;
     }
 
@@ -33,9 +32,7 @@ public class NoticeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_notice, container, false);
+        return inflater.inflate(R.layout.fragment_my_post, container, false);
     }
-
-
 
 }

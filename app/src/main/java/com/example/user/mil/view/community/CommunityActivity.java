@@ -36,21 +36,21 @@ public class CommunityActivity extends AppCompatActivity {
                 Fragment selectedFragment = null;
 
                 switch (menuItemId)  {
-                    case R.id.action_book_popular:
+                    case R.id.action_community_timeline:
                         selectedFragment = PopularBookFragment.newInstance();
                         break;
 
-                    case R.id.action_book_review:
+                    case R.id.action_community_notice:
                         selectedFragment = ReviewFragment.newInstance();
                         break;
 
-                    case R.id.action_book_rank:
+                    case R.id.action_community_my:
                         selectedFragment = RankFragment.newInstance();
                         break;
                 }
 
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.book_fragment_container, selectedFragment);
+                transaction.replace(R.id.community_fragment_container, selectedFragment);
                 transaction.commit();
             }
 
@@ -61,7 +61,7 @@ public class CommunityActivity extends AppCompatActivity {
         });
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.book_fragment_container, PopularBookFragment.newInstance());
+        transaction.replace(R.id.community_fragment_container, PopularBookFragment.newInstance());
         transaction.commit();
     }
 
