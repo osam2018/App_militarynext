@@ -7,20 +7,23 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CalendarView;
+import android.widget.ListView;
 
 import com.example.user.mil.R;
+import com.example.user.mil.model.Notice;
+import com.example.user.mil.model.TroopTodo;
+import com.example.user.mil.view.community.NoticeAdapter;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link TroopTodoFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link TroopTodoFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+
+
 public class TroopTodoFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
 
+    private ArrayList<TroopTodo> noticeArrayList = new ArrayList<TroopTodo>();
+    private ListView noticeListView;
+    NoticeAdapter noticeAdapter;
 
     public TroopTodoFragment() {
         // Required empty public constructor

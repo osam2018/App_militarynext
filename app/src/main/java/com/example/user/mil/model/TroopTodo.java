@@ -5,12 +5,18 @@ public class TroopTodo {
     private int month;
     private int day;
     private String title;
+    private boolean isClear;
 
-    public TroopTodo(int year, int month, int day, String title) {
+    public TroopTodo() {
+
+    }
+
+    public TroopTodo(int year, int month, int day, String title,boolean isClear) {
         this.year = year;
         this.month = month;
         this.day = day;
         this.title = title;
+        this.isClear = isClear;
     }
 
     public int getYear() {
@@ -43,5 +49,13 @@ public class TroopTodo {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public boolean isClear() {
+        return isClear;
+    }
+
+    public void setClear(boolean clear) {
+        isClear = clear;
     }
 }

@@ -211,19 +211,22 @@
         "year": 2018,
         "month" : 10,
         "day": 26,
-        "title": "10:30 주임원사 간담회"
+        "title": "10:30 주임원사 간담회",
+        "isClear": false
       },
       "tlrekdwldnjsenqjsWo": {
         "year": 2018,
         "month" : 10,
         "day": 27,
-        "title": "23:30 불침번"
+        "title": "23:30 불침번",
+        "isClear": false
       },
       "tlrekdwldnjstpqjsWo": {
         "year": 2018,
         "month": 10,
         "day": 28,
-        "title": "11:40 식당지원"
+        "title": "11:40 식당지원",
+        "isClear": false
       }
     },
     "notice": {
