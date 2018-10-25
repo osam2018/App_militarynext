@@ -9,6 +9,10 @@ public class TimeLine {
     private int seeNum;
     private int reviewNum;
 
+    public TimeLine() {
+
+    }
+
     public TimeLine(String id, String title, String description, String userid, int seeNum, int reviewNum) {
         this.id = id;
         this.title = title;

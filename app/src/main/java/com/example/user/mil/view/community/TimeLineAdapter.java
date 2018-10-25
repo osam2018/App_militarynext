@@ -59,7 +59,7 @@ public class TimeLineAdapter extends BaseAdapter {
 //            Glide.with(context).load(model.getImageUrl()).into(holder.bookImageView);
             holder.titleTextview.setText(model.getTitle());
             holder.descriptionTextView.setText(model.getDescription());
-            holder.seeCountTextView.setText(model.getSeeNum());
+            holder.seeCountTextView.setText(String.valueOf(model.getSeeNum()));
             holder.reviewCountTextView.setText(String.valueOf(model.getReviewNum()));
         }
 

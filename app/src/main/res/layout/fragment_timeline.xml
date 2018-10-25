@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:includeFontPadding="false"
-        android:text="도서후기"
+        android:text="타임라인"
         android:textColor="#ffffff"
         android:textSize="13sp"
         app:layout_constraintBottom_toBottomOf="@+id/review_title_header"

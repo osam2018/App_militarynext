@@ -70,6 +70,7 @@ public class TimelineFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        timeLineArrayList.clear();
         getTimeline();
     }
 

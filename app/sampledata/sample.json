@@ -40,31 +40,31 @@
           "id": "dkdlgjqm",
           "name": "아이허브 단백질 보충제가 반값세일!",
           "webLink": "https://www.coupang.com/vp/products/12849541?itemId=54093368&vendorItemId=3084708889&q=%EB%8B%A8%EB%B0%B1%EC%A7%88%EB%B3%B4%EC%B6%A9%EC%A0%9C&itemsCount=36&searchId=dbaf8f36901b46d0a1399cec7928fbe5&rank=0",
-          "imageLink": "//thumbnail13.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2017/01/06/14/6/4b671fb0-d9fc-4ffe-b8c8-dc3f826e8136.jpg",
+          "imageLink": "https://thumbnail13.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2017/01/06/14/6/4b671fb0-d9fc-4ffe-b8c8-dc3f826e8136.jpg",
           "price": 22730,
           "brand": "아이허브",
           "salePercent": 10,
-          "buyNum": 600
+          "buyNum": 102
         },
         "dpavlTmflvmffpdldj": {
           "id": "dpavlTmflvmffpdldj",
           "name": "군전용 mp3 플레이어 특가판매!",
           "webLink": "https://www.coupang.com/vp/products/66925711?itemId=224703194&vendorItemId=3546060222&q=mp3+%ED%94%8C%EB%A0%88%EC%9D%B4%EC%96%B4&itemsCount=36&searchId=9b4d445a34064ceb9c374a13912da916&rank=0",
-          "imageLink": "//thumbnail11.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/images/2018/07/04/11/3/e3549457-4ecc-42c3-94d8-b8fd2ea65703.jpg",
+          "imageLink": "https://thumbnail11.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/images/2018/07/04/11/3/e3549457-4ecc-42c3-94d8-b8fd2ea65703.jpg",
           "price": 18000,
           "brand": "COWON",
           "salePercent": 10,
-          "buyNum": 600
+          "buyNum": 200
         },
         "tmakxmvhsxmrrk": {
           "id": "tmakxmvhsxmrrk",
           "name": "독서대 할인판매!",
           "webLink": " https://www.coupang.com/vp/products/1238777?itemId=5355930&vendorItemId=3000273274&q=%EB%8F%85%EC%84%9C%EB%8C%80&itemsCount=36&searchId=a7a7c93ec7924d9382c3362907b5b2a9&rank=0",
-          "imageLink": "//thumbnail14.coupangcdn.com/thumbnails/remote/230x230ex/image/product/image/vendoritem/2018/10/23/3000273274/31cd659d-9bee-4f54-ae82-72fa0b06eede.jpg",
+          "imageLink": "https://thumbnail14.coupangcdn.com/thumbnails/remote/230x230ex/image/product/image/vendoritem/2016/06/22/3000273272/eb120fd3-847e-4af4-b30a-e8afda3f5e7b.jpg",
           "price": 20000,
           "brand": "coupang",
           "salePercent": 10,
-          "buyNum": 600
+          "buyNum": 412
         }
       }
     },
@@ -73,7 +73,7 @@
         "xhdlrcor": {
           "id": "xhdlrcor",
           "name": "토익책!",
-          "imageLink": "//thumbnail14.coupangcdn.com/thumbnails/remote/230x230ex/image/product/image/vendoritem/2018/10/23/3000273274/31cd659d-9bee-4f54-ae82-72fa0b06eede.jpg",
+          "imageLink": "https://thumbnail11.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/images/2018/09/22/18/1/1a45d067-7cb3-4349-afae-2fde1eda366f.jpg",
           "description": "공부하기전에 목표점수가 달성되어 깨끗한 상태인 책을 바로 판매합니다.",
           "seeCount": 4,
           "likedCount": 7,
@@ -83,27 +83,17 @@
         "xhdlrcor1": {
           "id": "xhdlrcor1",
           "name": "CD 플레이어, CD 3종",
-          "imageLink": "https://image.aladin.co.kr/product/16868/13/cover150/k532534979_1.jpg",
+          "imageLink": "https://thumbnail11.coupangcdn.com/thumbnails/remote/230x230ex/image/product/image/vendoritem/2016/05/13/3013974310/ec0e15d6-a01c-47ce-953a-733ddcc6d295.jpg",
           "description": "CD 플레이어, CD 3종입니다. 볼빨간사춘기, 레드벨벳, 트와이스 총 3종입니다.",
           "seeCount": 6,
           "likedCount": 7,
           "milNumber": "17-76087465",
           "price": 3000
         },
-        "xhdlrcor2": {
-          "id": "xhdlrcor2",
-          "name": "자격증책 5권!",
-          "imageLink": "https://image.aladin.co.kr/product/16868/13/cover150/k532534979_1.jpg",
-          "description": "공부하다가 그만둬서 책상태가 깨끗합니다. 다른분들은 이걸로 공부해서 포상휴가 타세요~",
-          "seeCount": 8,
-          "likedCount": 9,
-          "milNumber": "17-76087465",
-          "price": 4000
-        },
         "xhdlrcor3": {
           "id": "xhdlrcor3",
           "name": "코원 밀리터리",
-          "imageLink": "https://image.aladin.co.kr/product/16868/13/cover150/k532534979_1.jpg",
+          "imageLink": "https://thumbnail15.coupangcdn.com/thumbnails/remote/230x230ex/image/product/image/vendoritem/2018/07/11/3526520453/52ea2ab3-6199-468a-abb1-9f6036e5dba8.jpg",
           "description": "전역을 하게되어서 필요가 없을거같아 싸게 판매합니다.",
           "seeCount": 10,
           "likedCount": 11,
@@ -177,25 +167,25 @@
       "id": "dlfqjsrmf",
       "title": "영어 공부 꿀팁 알려드립니다.",
       "description": "하루아침 단어 30개, 독해 10문제 영어 듣기 지문 5개씩 매일매일하시면 토익 800점 이상 찍으실수 있어요 ~~. 하루아침 단어 30개, 독해 10문제 영어 듣기 지문 5개씩 매일매일하시면 토익 800점 이상 찍으실수 있어요 ~~ ",
-      "userId": "17-76087465",
+      "userid": "17-76087465",
       "seeNum": 89,
-      "reviewNum": 0
+      "reviewNum": 3
     },
     "dlqjsrmf": {
       "id": "dlqjsrmf",
       "title": "선임들에게 잘보일려면 어떻게해야하죠?",
       "description": "이제들어온 신병입니다. 선임들에게 잘보이고 싶은데 주의할점좀 알려주세요",
-      "userId": "17-76087465",
+      "userid": "17-76087465",
       "seeNum": 7,
-      "reviewNum": 0
+      "reviewNum": 4
     },
     "takqjsrmf": {
       "id": "tkaqjsrmf",
       "title": "몸짱되는 운동법 공유합니다.",
       "description": "하루 10km 달리기, 팔굽혀펴기 100개, 윗몸일으키기 100개씩하시면됩니다.",
-      "userId": "17-76087465",
+      "userid": "admin",
       "seeNum": 67,
-      "reviewNum": 0
+      "reviewNum": 5
     }
   },
   "notice": {

@@ -65,6 +65,7 @@ public class ReviewFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        reviewArrayList.clear();
         getRaviewData();
     }
 

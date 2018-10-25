@@ -85,6 +85,7 @@ public class CommonStoreFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        commonProducts.clear();
         getCommonProductsData();
     }
 

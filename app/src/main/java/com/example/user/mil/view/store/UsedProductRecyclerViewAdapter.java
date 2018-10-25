@@ -68,7 +68,7 @@ public class UsedProductRecyclerViewAdapter extends RecyclerView.Adapter<UsedPro
 
             title.setText(item.getName());
             included.setText("4284부대 일병 조영제");
-            price.setText(String.valueOf(item.getPrice()));
+            price.setText(String.valueOf(item.getPrice()) +"원");
             likedCount.setText(String.valueOf(item.getLikedCount()));
             seeCount.setText(String.valueOf(item.getSeeCount()));
             Glide.with(mContext).load(item.getImageLink()).into(imageUrl);

@@ -7,6 +7,10 @@ public class Review {
     private String bookName;
     private String description;
 
+    public Review() {
+
+    }
+
     public Review(String id, float startRate, String bookName, String description) {
 
         this.id = id;

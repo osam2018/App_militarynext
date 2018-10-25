@@ -25,9 +25,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-
 public class UsedProductFragment extends Fragment {
-
 
     @BindView(R.id.used_product_recycler)
     RecyclerView usedProductRecycler;
@@ -42,7 +40,13 @@ public class UsedProductFragment extends Fragment {
         usedProductRecycler.setAdapter(usedProductAdapter);
 
         usedProductLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
+
         usedProductRecycler.setLayoutManager(usedProductLayoutManager);
+
+        int spanCount = 2; // 2 columns
+        int spacing = 12; // 50px
+        boolean includeEdge = false;
+        usedProductRecycler.addItemDecoration(new GridSpacingItemDecoration(spanCount, spacing, includeEdge));
 
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference mDatabase = firebaseDatabase.getReference();
@@ -98,6 +102,7 @@ public class UsedProductFragment extends Fragment {
     public void onStart() {
 
         super.onStart();
+        usedProducts.clear();
         initRecyclerView();
 
     }

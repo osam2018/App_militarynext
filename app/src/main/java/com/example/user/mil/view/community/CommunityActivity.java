@@ -1,26 +1,32 @@
 package com.example.user.mil.view.community;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.widget.FrameLayout;
 
 import com.example.user.mil.R;
 import com.example.user.mil.view.book.PopularBookFragment;
-import com.example.user.mil.view.book.RankFragment;
-import com.example.user.mil.view.book.ReviewFragment;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnMenuTabClickListener;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class CommunityActivity extends AppCompatActivity {
 
-    @BindView(R.id.book_fragment_container)
+    @BindView(R.id.community_fragment_container)
     FrameLayout frameLayout;
+
+    @OnClick(R.id.add_timeline_button)
+    public void uploadTimeline() {
+        Intent intent = new Intent(CommunityActivity.this,UploadActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +34,8 @@ public class CommunityActivity extends AppCompatActivity {
         setContentView(R.layout.activity_community);
         ButterKnife.bind(this);
 
-        BottomBar bottomNavigationMenu = (BottomBar) findViewById(R.id.book_bottom_navigation);
-        bottomNavigationMenu.setItems(R.menu.book_navigation_item);
+        BottomBar bottomNavigationMenu = (BottomBar) findViewById(R.id.community_bottom_navigation);
+        bottomNavigationMenu.setItems(R.menu.comuunity_navigation_item);
         bottomNavigationMenu.setOnMenuTabClickListener(new OnMenuTabClickListener() {
             @Override
             public void onMenuTabSelected(@IdRes int menuItemId) {
@@ -37,15 +43,15 @@ public class CommunityActivity extends AppCompatActivity {
 
                 switch (menuItemId)  {
                     case R.id.action_community_timeline:
-                        selectedFragment = PopularBookFragment.newInstance();
+                        selectedFragment = TimelineFragment.newInstance();
                         break;
 
                     case R.id.action_community_notice:
-                        selectedFragment = ReviewFragment.newInstance();
+                        selectedFragment = NoticeFragment.newInstance();
                         break;
 
                     case R.id.action_community_my:
-                        selectedFragment = RankFragment.newInstance();
+                        selectedFragment = MyPostFragment.newInstance();
                         break;
                 }
 
@@ -61,7 +67,7 @@ public class CommunityActivity extends AppCompatActivity {
         });
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.community_fragment_container, PopularBookFragment.newInstance());
+        transaction.replace(R.id.community_fragment_container, TimelineFragment.newInstance());
         transaction.commit();
     }
 

@@ -72,6 +72,7 @@ public class PopularBookFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        bookArrayList.clear();
         getRankingData();
     }
 

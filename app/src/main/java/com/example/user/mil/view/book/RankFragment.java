@@ -56,6 +56,7 @@ public class RankFragment extends Fragment {
     @Override
     public void onStart() {
        super.onStart();
+        bookRankArrayList.clear();
         getRankingData();
     }
 

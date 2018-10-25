@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.user.mil.R;
 import com.example.user.mil.model.Book;
+import com.example.user.mil.model.Notice;
 import com.example.user.mil.view.book.PopularBookAdapter;
 
 import java.util.ArrayList;
@@ -18,9 +19,9 @@ import java.util.ArrayList;
 public class NoticeAdapter extends BaseAdapter {
 
     private Context context;
-    private ArrayList<Book> models;
+    private ArrayList<Notice> models;
 
-    public NoticeAdapter(Context context, ArrayList<Book> models ) {
+    public NoticeAdapter(Context context, ArrayList<Notice> models ) {
         this.context = context;
         this.models = models;
     }
@@ -43,27 +44,28 @@ public class NoticeAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        PopularBookAdapter.ViewHolder holder;
+        ViewHolder holder;
 
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) parent.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-            convertView = inflater.inflate(R.layout.card_book, parent, false);
-            holder = new PopularBookAdapter.ViewHolder(convertView);
+            convertView = inflater.inflate(R.layout.card_notice, parent, false);
+            holder = new ViewHolder(convertView);
 
             convertView.setTag(holder);
         } else {
-            holder = (PopularBookAdapter.ViewHolder) convertView.getTag();
+            holder = (ViewHolder) convertView.getTag();
         }
 
-        Book model = models.get(position);
+        Notice model = models.get(position);
 
         if(model != null) {
-            Glide.with(context).load(model.getImageUrl()).into(holder.bookImageView);
-            holder.rankTextView.setText(String.valueOf(position + 1));
-            holder.nameTextView.setText(model.getName());
-            holder.authorTextView.setText(model.getAuthor());
-            holder.popularityTextView.setText(String.valueOf(model.getPopularity()));
+            holder.titleTextView.setText(model.getTitle());
+//            Glide.with(context).load(model.getImageUrl()).into(holder.bookImageView);
+//            holder.rankTextView.setText(String.valueOf(position + 1));
+//            holder.nameTextView.setText(model.getName());
+//            holder.authorTextView.setText(model.getAuthor());
+//            holder.popularityTextView.setText(String.valueOf(model.getPopularity()));
         }
 
         return convertView;
@@ -71,18 +73,19 @@ public class NoticeAdapter extends BaseAdapter {
 
     static class ViewHolder {
 
-        ImageView bookImageView;
-        TextView rankTextView;
-        TextView nameTextView;
-        TextView authorTextView;
-        TextView popularityTextView;
+        TextView titleTextView;
+//        ImageView bookImageView;
+//        TextView rankTextView;
+//        TextView nameTextView;
+//        TextView authorTextView;
+//        TextView popularityTextView;
 
         ViewHolder(View view) {
-            bookImageView = (ImageView) view.findViewById(R.id.popular_book_image);
-            rankTextView = (TextView) view.findViewById(R.id.popular_book_rank);
-            nameTextView = (TextView) view.findViewById(R.id.popular_book_name);
-            authorTextView = (TextView) view.findViewById(R.id.popular_book_author);
-            popularityTextView = (TextView) view.findViewById(R.id.popular_book_popularity);
+//            bookImageView = (ImageView) view.findViewById(R.id.popular_book_image);
+            titleTextView = (TextView) view.findViewById(R.id.noticeTextView);
+//            nameTextView = (TextView) view.findViewById(R.id.popular_book_name);
+//            authorTextView = (TextView) view.findViewById(R.id.popular_book_author);
+//            popularityTextView = (TextView) view.findViewById(R.id.popular_book_popularity);
         }
     }
 }
