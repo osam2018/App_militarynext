@@ -23,6 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 
 public class ReviewFragment extends Fragment {
@@ -51,14 +52,20 @@ public class ReviewFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_rank, container, false);
+        View view = inflater.inflate(R.layout.fragment_review, container, false);
         reviewListView = (ListView) view.findViewById(R.id.book_review_listview);
         reviewAdapter = new ReviewAdapter(getContext(), reviewArrayList);
         reviewListView.setAdapter(reviewAdapter);
-        getRaviewData();
+
         // Inflate the layout for this fragment
         return view;
 
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        getRaviewData();
     }
 
     public void getRaviewData() {

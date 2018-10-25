@@ -45,10 +45,6 @@ public class BookActivity extends AppCompatActivity {
                         selectedFragment = ReviewFragment.newInstance();
                         break;
 
-                    case R.id.action_book_readed:
-                        selectedFragment = MyBookStoreFragment.newInstance();
-                        break;
-
                     case R.id.action_book_rank:
                         selectedFragment = RankFragment.newInstance();
                         break;

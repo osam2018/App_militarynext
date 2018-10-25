@@ -44,12 +44,12 @@ public class SellFragment extends Fragment {
        }
 
        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-       DatabaseReference databaseReference = firebaseDatabase.getReference();
+       DatabaseReference databaseReference = firebaseDatabase.getReference().child("store").child("used").child("items");
 
-       String key = databaseReference.getKey();
-
+       String key = databaseReference.push().getKey();
        UsedProduct newUsedProduct = new UsedProduct(key, name,"", description,price,0,0,current.getMilNumber());
-       databaseReference.child("store").child("used").child("items").child(key).setValue(newUsedProduct);
+
+       databaseReference.child(key).setValue(newUsedProduct);
 
        Toast.makeText(getActivity(), "물품 업로드가 완료되었습니다.", Toast.LENGTH_SHORT).show();
    }

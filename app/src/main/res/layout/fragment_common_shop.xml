@@ -16,6 +16,7 @@
         android:layout_marginTop="16dp"
         android:textSize="22sp"
         android:textStyle="bold"
+        android:text="공동 구매 상품"
         />
 
     <ListView

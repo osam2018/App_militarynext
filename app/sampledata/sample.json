@@ -154,5 +154,22 @@
       "author": "정혜신",
       "popularity":500
     }
+  },
+  "reviews": {
+    "dlcorwhgdma": {
+      "bookName": "골든아워",
+      "description": "이국종 교수님 정말 대단한 사람입니다.",
+      "startRate": 4
+    },
+    "gjdrjrpdla": {
+      "bookName": "헝거게임",
+      "description": "빌게이츠가 추천하는 생존게임",
+      "startRate": 3
+    },
+    "anfkzkakgkfnzl": {
+      "bookName": "1Q84",
+      "description": "무라카미 하루키의 특유의 분위기가 느껴지는 작품입니다",
+      "startRate": 4
+    }
   }
 }

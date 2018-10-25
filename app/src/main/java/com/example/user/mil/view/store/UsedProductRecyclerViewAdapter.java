@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.user.mil.R;
+import com.example.user.mil.model.CommonProduct;
 import com.example.user.mil.model.UsedProduct;
 
 import java.nio.file.attribute.PosixFileAttributes;
@@ -23,11 +24,11 @@ import butterknife.ButterKnife;
 
 public class UsedProductRecyclerViewAdapter extends RecyclerView.Adapter<UsedProductRecyclerViewAdapter.ViewHolder> {
 
-    ArrayList mValues;
-    Context mContext;
+    private Context mContext;
+    private ArrayList<UsedProduct> models;
 
     public UsedProductRecyclerViewAdapter(Context context, ArrayList values) {
-        mValues = values;
+        models = values;
         mContext = context;
     }
 
@@ -91,12 +92,12 @@ public class UsedProductRecyclerViewAdapter extends RecyclerView.Adapter<UsedPro
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
-        viewHolder.setData((UsedProduct)mValues.get(position));
+        viewHolder.setData(models.get(position));
     }
 
 
     @Override
     public int getItemCount() {
-        return mValues.size();
+        return models.size();
     }
 }

@@ -49,7 +49,7 @@ public class CommonProductAdapter extends BaseAdapter {
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) parent.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-            convertView = inflater.inflate(R.layout.card_book_rank, parent, false);
+            convertView = inflater.inflate(R.layout.card_custom_product, parent, false);
             holder = new ViewHolder(convertView);
 
             convertView.setTag(holder);
@@ -62,9 +62,9 @@ public class CommonProductAdapter extends BaseAdapter {
         Glide.with(context).load(model.getImageLink()).into(holder.productImageView);
         holder.brandTextView.setText(model.getBrand());
         holder.nameTextView.setText(model.getName());
-        holder.saleTextView.setText(String.valueOf(model.getSalePercent()));
-        holder.priceTextView.setText(String.valueOf(model.getPrice()));
-        holder.buynumTextView.setText(String.valueOf(model.getBuyNum()));
+        holder.saleTextView.setText(String.valueOf(model.getSalePercent()) + "% 할인중");
+        holder.priceTextView.setText(String.valueOf(model.getPrice()) + "원");
+        holder.buynumTextView.setText(String.valueOf(model.getBuyNum() + "개"));
 
         return convertView;
     }

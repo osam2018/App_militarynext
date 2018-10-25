@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MenuSelectActivity"
-    android:layout_weight="2"
+    android:layout_weight="3"
     android:orientation="vertical"
     >
 
@@ -23,6 +23,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="독서마당"
+        android:layout_weight="1"
+        />
+
+    <Button
+        android:id="@+id/menu_commmunity_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="커뮤니티"
         android:layout_weight="1"
         />
 

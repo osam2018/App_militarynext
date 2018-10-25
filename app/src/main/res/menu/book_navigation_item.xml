@@ -2,16 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/action_book_popular"
         android:title="인기책"
+        android:icon="@drawable/ic_library_books_black_24dp"
         />
     <item android:id="@+id/action_book_review"
         android:title="후기"
-
+        android:icon="@drawable/ic_rate_review_black_24dp"
         />
-    <item android:id="@+id/action_book.readed"
-        android:title="읽은책"
 
-        />
     <item android:id="@+id/action_book_rank"
         android:title="다독랭킹"
+        android:icon="@drawable/ic_list_black_24dp"
         />
 </menu>

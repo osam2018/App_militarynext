@@ -38,7 +38,7 @@ dependencies {
     implementation 'com.roughike:bottom-bar:1.4.0.1'
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.github.bumptech.glide:glide:4.8.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
     // Add dependency
     implementation 'com.crashlytics.sdk.android:crashlytics:2.9.5'

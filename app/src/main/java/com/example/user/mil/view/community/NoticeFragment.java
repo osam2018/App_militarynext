@@ -11,16 +11,16 @@ import android.view.ViewGroup;
 import com.example.user.mil.R;
 
 
-public class TimelineFragment extends Fragment {
+public class NoticeFragment extends Fragment {
 
 
-    public TimelineFragment() {
+    public NoticeFragment() {
         // Required empty public constructor
     }
 
+    public static NoticeFragment newInstance() {
+        NoticeFragment fragment = new NoticeFragment();
 
-    public static TimelineFragment newInstance() {
-        TimelineFragment fragment = new TimelineFragment();
         return fragment;
     }
 
@@ -34,9 +34,12 @@ public class TimelineFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_timeline, container, false);
+        return inflater.inflate(R.layout.fragment_notice, container, false);
     }
 
+    // TODO: Rename method, update argument and hook method into UI event
+    public void onButtonPressed(Uri uri) {
 
+    }
 
 }

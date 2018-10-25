@@ -41,6 +41,8 @@
         <!-- </intent-filter> -->
         <!-- </service> -->
 
+        <activity android:name=".view.community.UploadActivity" />
+        <activity android:name=".SpalshActivity"></activity>
     </application>
 
 </manifest>

@@ -1,6 +1,7 @@
 package com.example.user.mil.view.book;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.user.mil.R;
@@ -44,7 +46,6 @@ public class PopularBookFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -52,14 +53,26 @@ public class PopularBookFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View view = inflater.inflate(R.layout.fragment_rank, container, false);
-        popularBookListView = (ListView) view.findViewById(R.id.book_rank_listview);
+        View view = inflater.inflate(R.layout.fragment_popular_book, container, false);
+        popularBookListView = (ListView) view.findViewById(R.id.popularbook_listview);
         popularBookAdapter = new PopularBookAdapter(getContext(), bookArrayList);
         popularBookListView.setAdapter(popularBookAdapter);
+        popularBookListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(bookArrayList.get(position).getWebUrl()));
+                startActivity(intent);
+            }
+        });
 
+        return view;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
         getRankingData();
-
-        return inflater.inflate(R.layout.fragment_popular_book, container, false);
     }
 
     public void getRankingData() {

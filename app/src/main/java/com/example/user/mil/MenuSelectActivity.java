@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import com.example.user.mil.R;
 import com.example.user.mil.view.book.BookActivity;
+import com.example.user.mil.view.community.CommunityActivity;
 import com.example.user.mil.view.store.StoreActivity;
 
 import butterknife.BindView;
@@ -25,6 +26,12 @@ public class MenuSelectActivity extends AppCompatActivity {
     @OnClick(R.id.menu_book_select)
     public void moveToBook() {
         Intent intent = new Intent(this, BookActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.menu_commmunity_select)
+    public void moveToCommunity() {
+        Intent intent = new Intent(this, CommunityActivity.class);
         startActivity(intent);
     }
 

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.user.mil.R;
@@ -48,7 +49,7 @@ public class PopularBookAdapter extends BaseAdapter {
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) parent.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-            convertView = inflater.inflate(R.layout.card_book_rank, parent, false);
+            convertView = inflater.inflate(R.layout.card_book, parent, false);
             holder = new ViewHolder(convertView);
 
             convertView.setTag(holder);
@@ -58,11 +59,15 @@ public class PopularBookAdapter extends BaseAdapter {
 
         Book model = models.get(position);
 
-        Glide.with(context).load(model.getImageUrl()).into(holder.bookImageView);
-        holder.rankTextView.setText(String.valueOf(position + 1));
-        holder.nameTextView.setText(model.getName());
-        holder.authorTextView.setText(model.getAuthor());
-        holder.popularityTextView.setText(String.valueOf(model.getPopularity()));
+        if(model != null) {
+            Glide.with(context).load(model.getImageUrl()).into(holder.bookImageView);
+            holder.rankTextView.setText(String.valueOf(position + 1));
+            holder.nameTextView.setText(model.getName());
+            holder.authorTextView.setText(model.getAuthor());
+            holder.popularityTextView.setText(String.valueOf(model.getPopularity()));
+        }
+
+
 
         return convertView;
     }

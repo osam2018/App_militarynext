@@ -90,13 +90,16 @@ public class UsedProductFragment extends Fragment {
         ButterKnife.bind(this, view);
 
         usedProductRecycler = (RecyclerView) view.findViewById(R.id.used_product_recycler);
-        initRecyclerView();
+
         return view;
     }
 
     @Override
     public void onStart() {
+
         super.onStart();
+        initRecyclerView();
+
     }
 
 
