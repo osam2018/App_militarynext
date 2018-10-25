@@ -250,6 +250,15 @@
         "title": "407호 생활관 청소상태 불량. 근무나갈시 정리정돈요망 ",
         "isDeleted": false
       }
+    },
+    "group" : {
+      "duddjtmxjel": {
+        "currentNum": 1,
+        "maxNum": 4,
+        "groupName": "영어스터디"
+        "groupOwner": "공병국",
+        "groupContent": "일주일에 한번 토요일에 모여섵 토익스터디를 합니다."
+      }
     }
   }
 }

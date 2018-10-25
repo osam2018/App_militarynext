@@ -8,7 +8,7 @@
     tools:context=".view.community.NoticeFragment">
 
     <View
-        android:id="@+id/notice_title_header"
+        android:id="@+id/troop_group_title_header"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginEnd="0dp"
@@ -23,19 +23,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:includeFontPadding="false"
-        android:text="부대 전파사항"
+        android:text="부대 모임"
         android:textColor="#ffffff"
         android:textSize="13sp"
-        app:layout_constraintBottom_toBottomOf="@+id/notice_title_header"
-        app:layout_constraintLeft_toLeftOf="@+id/notice_title_header"
-        app:layout_constraintRight_toRightOf="@+id/notice_title_header"
-        app:layout_constraintTop_toTopOf="@+id/notice_title_header" />
+        app:layout_constraintBottom_toBottomOf="@+id/troop_group_title_header"
+        app:layout_constraintLeft_toLeftOf="@+id/troop_group_title_header"
+        app:layout_constraintRight_toRightOf="@+id/troop_group_title_header"
+        app:layout_constraintTop_toTopOf="@+id/troop_group_title_header" />
 
     <ListView
-        android:id="@+id/notice_listview"
+        android:id="@+id/troop_group_listview"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/notice_title_header"
+        app:layout_constraintTop_toBottomOf="@+id/troop_group_title_header"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginStart="8dp"
