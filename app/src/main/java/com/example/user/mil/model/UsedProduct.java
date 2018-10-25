@@ -11,6 +11,10 @@ public class UsedProduct {
     private int likedCount;
     private String milNumber;
 
+    public UsedProduct() {
+
+    }
+
     public UsedProduct(String id, String name, String imageLink, String description, int price, int seeCount, int likedCount, String milNumber) {
         this.id = id;
         this.name = name;

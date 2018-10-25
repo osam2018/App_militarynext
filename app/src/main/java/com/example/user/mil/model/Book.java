@@ -9,6 +9,10 @@ public class Book {
     private String author;
     private int popularity;
 
+    public Book() {
+
+    }
+
     public Book(String id, String name, String imageUrl, String webUrl, String author, int popularity) {
         this.id = id;
         this.name = name;

@@ -6,6 +6,10 @@ public class Review {
     private String bookName;
     private String description;
 
+    public Review() {
+
+    }
+
     public Review(float startRate, String bookName, String description) {
         this.startRate = startRate;
         this.bookName = bookName;

@@ -11,6 +11,11 @@ public class CommonProduct {
     private int buyNum;
     private String webLink;
 
+    public CommonProduct() {
+
+    }
+
+
 
     public CommonProduct(String id, String imageLink, String name, String brand, int price, int salePercent, int buyNum, String webLink) {
         this.id = id;

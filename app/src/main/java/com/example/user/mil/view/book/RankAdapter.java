@@ -55,9 +55,9 @@ public class RankAdapter extends BaseAdapter {
 
         BookRank model = models.get(position);
 
-        holder.rank.setText(String.valueOf(position + 1));
+        holder.rank.setText(String.valueOf(position + 1) +"위");
         holder.name.setText(model.getUserName());
-        holder.bookNum.setText(String.valueOf(model.getReadNum()));
+        holder.bookNum.setText(String.valueOf(model.getReadNum()) + " 권");
 
         return convertView;
     }

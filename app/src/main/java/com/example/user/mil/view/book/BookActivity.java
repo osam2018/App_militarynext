@@ -55,7 +55,7 @@ public class BookActivity extends AppCompatActivity {
                 }
 
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.store_fragment_container, selectedFragment);
+                transaction.replace(R.id.book_fragment_container, selectedFragment);
                 transaction.commit();
             }
 
@@ -66,7 +66,7 @@ public class BookActivity extends AppCompatActivity {
         });
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.store_fragment_container, PopularBookFragment.newInstance());
+        transaction.replace(R.id.book_fragment_container, PopularBookFragment.newInstance());
         transaction.commit();
     }
 

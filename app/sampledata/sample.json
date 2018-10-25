@@ -6,7 +6,7 @@
       "grade": "일병",
       "name": "조영제",
       "troopName": "4284부대",
-      "bookNum": 7
+      "bookNum": 37
     },
     "17-76087454":  {
       "milNumber": "17-76087454",
@@ -14,7 +14,7 @@
       "grade": "병장",
       "name": "공병국",
       "troopName": "4284부대",
-      "bookNum": 15
+      "bookNum": 35
     },
     "17-76087467":  {
       "milNumber": "17-76087467",
@@ -39,29 +39,32 @@
         "dkdlgjqm": {
           "id": "dkdlgjqm",
           "name": "아이허브 단백질 보충제가 반값세일!",
-          "webLink": "",
-          "imageLink": "",
-          "price": 15000,
+          "webLink": "https://www.coupang.com/vp/products/12849541?itemId=54093368&vendorItemId=3084708889&q=%EB%8B%A8%EB%B0%B1%EC%A7%88%EB%B3%B4%EC%B6%A9%EC%A0%9C&itemsCount=36&searchId=dbaf8f36901b46d0a1399cec7928fbe5&rank=0",
+          "imageLink": "//thumbnail13.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2017/01/06/14/6/4b671fb0-d9fc-4ffe-b8c8-dc3f826e8136.jpg",
+          "price": 22730,
           "brand": "아이허브",
-          "salePercent": 10
+          "salePercent": 10,
+          "buyNum": 600
         },
         "dpavlTmflvmffpdldj": {
           "id": "dpavlTmflvmffpdldj",
           "name": "군전용 mp3 플레이어 특가판매!",
-          "webLink": "",
-          "imageLink": "",
+          "webLink": "https://www.coupang.com/vp/products/66925711?itemId=224703194&vendorItemId=3546060222&q=mp3+%ED%94%8C%EB%A0%88%EC%9D%B4%EC%96%B4&itemsCount=36&searchId=9b4d445a34064ceb9c374a13912da916&rank=0",
+          "imageLink": "//thumbnail11.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/images/2018/07/04/11/3/e3549457-4ecc-42c3-94d8-b8fd2ea65703.jpg",
           "price": 18000,
           "brand": "COWON",
-          "salePercent": 10
+          "salePercent": 10,
+          "buyNum": 600
         },
         "tmakxmvhsxmrrk": {
           "id": "tmakxmvhsxmrrk",
           "name": "독서대 할인판매!",
-          "webLink": "",
-          "imageLink": "",
+          "webLink": " https://www.coupang.com/vp/products/1238777?itemId=5355930&vendorItemId=3000273274&q=%EB%8F%85%EC%84%9C%EB%8C%80&itemsCount=36&searchId=a7a7c93ec7924d9382c3362907b5b2a9&rank=0",
+          "imageLink": "//thumbnail14.coupangcdn.com/thumbnails/remote/230x230ex/image/product/image/vendoritem/2018/10/23/3000273274/31cd659d-9bee-4f54-ae82-72fa0b06eede.jpg",
           "price": 20000,
           "brand": "coupang",
-          "salePercent": 10
+          "salePercent": 10,
+          "buyNum": 600
         }
       }
     },
@@ -70,41 +73,86 @@
         "xhdlrcor": {
           "id": "xhdlrcor",
           "name": "토익책!",
-          "imageLink": "",
+          "imageLink": "//thumbnail14.coupangcdn.com/thumbnails/remote/230x230ex/image/product/image/vendoritem/2018/10/23/3000273274/31cd659d-9bee-4f54-ae82-72fa0b06eede.jpg",
           "description": "공부하기전에 목표점수가 달성되어 깨끗한 상태인 책을 바로 판매합니다.",
           "seeCount": 4,
           "likedCount": 7,
-          "milNumber": "17-76087465"
+          "milNumber": "17-76087465",
+          "price": 2000
         },
         "xhdlrcor1": {
           "id": "xhdlrcor1",
           "name": "CD 플레이어, CD 3종",
-          "imageLink": "",
+          "imageLink": "https://image.aladin.co.kr/product/16868/13/cover150/k532534979_1.jpg",
           "description": "CD 플레이어, CD 3종입니다. 볼빨간사춘기, 레드벨벳, 트와이스 총 3종입니다.",
           "seeCount": 6,
           "likedCount": 7,
-          "milNumber": "17-76087465"
+          "milNumber": "17-76087465",
+          "price": 3000
         },
         "xhdlrcor2": {
           "id": "xhdlrcor2",
           "name": "자격증책 5권!",
-          "imageLink": "",
+          "imageLink": "https://image.aladin.co.kr/product/16868/13/cover150/k532534979_1.jpg",
           "description": "공부하다가 그만둬서 책상태가 깨끗합니다. 다른분들은 이걸로 공부해서 포상휴가 타세요~",
           "seeCount": 8,
           "likedCount": 9,
-          "milNumber": "17-76087465"
+          "milNumber": "17-76087465",
+          "price": 4000
         },
         "xhdlrcor3": {
           "id": "xhdlrcor3",
           "name": "코원 밀리터리",
-          "imageLink": "",
+          "imageLink": "https://image.aladin.co.kr/product/16868/13/cover150/k532534979_1.jpg",
           "description": "전역을 하게되어서 필요가 없을거같아 싸게 판매합니다.",
           "seeCount": 10,
           "likedCount": 11,
-          "milNumber": "17-76087465"
+          "milNumber": "17-76087465",
+          "price": 50000
         }
       }
     }
   },
-
+  "books": {
+    "rhfemsdkdnj": {
+      "id": "rhfemsdkdnj",
+      "name": "골든아워1",
+      "webUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=168915737",
+      "imageUrl": "https://image.aladin.co.kr/product/16891/57/cover150/896596282x_1.jpg",
+      "author": "이국종",
+      "popularity":4201
+    },
+    "dnjsvltm": {
+      "id": "dnjsvltm",
+      "name": "원피스 90",
+      "webUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=171233510",
+      "imageUrl": "https://image.aladin.co.kr/product/17123/35/cover150/k212534382_1.jpg",
+      "author": "오다에이치로",
+      "popularity":3000
+    },
+    "rhfemsdkdnj2": {
+      "id": "rhfemsdkdnj2",
+      "name": "골든아워2",
+      "webUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=168915857",
+      "imageUrl": "https://image.aladin.co.kr/product/16891/58/cover150/8965962838_2.jpg",
+      "author": "이국종",
+      "popularity":2100
+    },
+    "tjfalstjr": {
+      "id": "tjfalstjr",
+      "name": "설민석의 한국사 대모험 8",
+      "webUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=168681371",
+      "imageUrl": "https://image.aladin.co.kr/product/16868/13/cover150/k532534979_1.jpg",
+      "author": "설민석",
+      "popularity":1000
+    },
+    "ekdtlsdldhfgek": {
+      "id": "ekdtlsdldhfgek",
+      "name": "당신이옳다",
+      "webUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=170717710",
+      "imageUrl": "https://image.aladin.co.kr/product/16938/73/cover150/8965746663_1.jpg",
+      "author": "정혜신",
+      "popularity":500
+    }
+  }
 }

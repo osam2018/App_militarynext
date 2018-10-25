@@ -5,6 +5,10 @@ public class BookRank {
     private String userName;
     private int readNum;
 
+    public BookRank() {
+
+    }
+
 
     public BookRank(String userName, int readNum) {
         this.userName = userName;

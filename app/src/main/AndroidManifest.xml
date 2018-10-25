@@ -22,7 +22,6 @@
         <activity android:name=".view.todo.TodoActivity" />
         <activity android:name=".view.troop.TroopActivity" />
         <activity android:name=".view.community.CommunityActivity" />
-
         <activity android:name=".MenuSelectActivity" />
         <activity android:name=".view.store.DeleteProductActivity" />
         <activity android:name=".view.book.BookActivity" />
