@@ -38,25 +38,26 @@
 ### 사용 라이브러리
 ```
 'com.google.firebase:firebase-core:16.0.4'
- 'com.google.firebase:firebase-database:16.0.3'
- 'com.google.firebase:firebase-messaging:17.3.4'
- 'com.google.firebase:firebase-storage:16.0.3'
- 'com.android.support:recyclerview-v7:28.0.0'
- 'com.android.support:design:28.0.0'
- 'com.roughike:bottom-bar:1.4.0.1'
- 'com.squareup.retrofit2:retrofit:2.4.0'
- 'com.github.bumptech.glide:glide:4.8.0'
- 'com.android.support:appcompat-v7:28.0.0'
- 'com.android.support.constraint:constraint-layout:1.1.3'
- 'com.android.support:support-v4:28.0.0'
+'com.google.firebase:firebase-database:16.0.3'
+'com.google.firebase:firebase-messaging:17.3.4'
+'com.google.firebase:firebase-storage:16.0.3'
+'com.android.support:recyclerview-v7:28.0.0'
+'com.android.support:design:28.0.0'
+'com.roughike:bottom-bar:1.4.0.1'
+'com.squareup.retrofit2:retrofit:2.4.0'
+'com.github.bumptech.glide:glide:4.8.0'
+'com.android.support:appcompat-v7:28.0.0'
+'com.android.support.constraint:constraint-layout:1.1.3'
+'com.android.support:support-v4:28.0.0'
 
 ```
+
 
 ### License
 ```
 MIT License
 
-Copyright (c) 2018 jo youngje
+Copyright (c) 2018 jo youngje site: https://www.github.com/siosio34
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
